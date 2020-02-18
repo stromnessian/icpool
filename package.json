@@ -27,7 +27,7 @@
     "url": "git+https://github.com/stromnessian/icpool.git"
   },
   "engines": {
-    "node": "12.4.1"
+    "node": "12.x"
   },
   "keywords": [],
   "author": "",
