@@ -1,0 +1,32 @@
+GET http://localhost:3000/players
+
+###
+
+
+GET http://localhost:3000/tables
+
+###
+
+POST http://localhost:3000/tables
+Content-Type: application/json
+
+{
+    "tableNumber": 4,
+    "player1Name": "Jock Bord",
+    "player1Score": 0,
+    "player2Name": "Terry Yaki",
+    "player2Score": 0
+}
+
+###
+
+DELETE http://localhost:3000/tables/5e486f79b844051b88904d34
+
+###
+
+PATCH http://localhost:3000/tables/5e47e26af51127351cc19197
+Content-Type: application/json
+
+{
+    "player2Name": "Fast Eddie"
+}
