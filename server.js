@@ -26,4 +26,4 @@ app.use('/players', playersRouter)
 const tablesRouter = require('./routes/tables')
 app.use('/tables', tablesRouter)
 
-app.listen(3000, () => console.log('Server Started'))
+app.listen(PORT, () => console.log('Server Started'))
