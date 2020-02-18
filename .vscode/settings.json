@@ -1,0 +1,8 @@
+{
+    "appService.deploySubpath": "",
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}",
+        ".vscode{,/**}"
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/958b4153-5a7f-490c-924f-928c0817fb3a/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/icpool"
+}
