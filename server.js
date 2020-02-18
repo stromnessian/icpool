@@ -1,6 +1,6 @@
 require('dotenv').config()
 
-process.env.PORT || 3000
+var port = process.env.PORT || 3000
 
 const path = require('path')
 const express = require('express')
@@ -26,4 +26,4 @@ app.use('/players', playersRouter)
 const tablesRouter = require('./routes/tables')
 app.use('/tables', tablesRouter)
 
-app.listen(PORT, () => console.log('Server Started'))
+app.listen(port, () => console.log('Server Started'))
