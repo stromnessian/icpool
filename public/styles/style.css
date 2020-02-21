@@ -26,20 +26,44 @@ input[type="number"]:hover, input[type="number"]:focus {
     -moz-appearance: number-input;
 }
 
-#scoreboard {
-    display: inline-flex;
-    justify-content: center;
-}
-
 .mainFlag {
-    height: 64px;
+    height: 60px;
+    margin-left: 0.5em;
 }
 
-.mainScore {
+.matchSelect {
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 2.8em;
+    font-style: italic;
+    font-weight: bold;
+    font-stretch: ultra-expanded;
+    text-align: center;
+}
+
+#match2Name {
+    margin-top: 0.5em;
+}
+
+.matchScore {
+    text-align: center;
+    margin-top: 0.5em;
+    display: flex;
+}
+
+#match1Score {
+    margin-bottom: 2em;
+}
+
+#match2Score {
+    margin-top: 0.5em;
+}
+
+.teamScore {
     font-weight: bold;
     font-size: 3em;
-    text-align: center;
-    width: 1.5em;
+    width: 1em;
+    margin-left: 0.4em;
 }
 
 .table {
@@ -53,13 +77,14 @@ input[type="number"]:hover, input[type="number"]:focus {
     font-size: 1.5em;
     font-style: italic;
     font-weight: bold;
+    margin-left: 10px;
 }
 
-.playerSelect, .playerNameLabel {
-    color: red;
+.playerSelect {
+    color: black;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 1.5em;
-    width: 100px;
+    width: 240px;
     padding-left: 0.5em;
 }
 
@@ -76,8 +101,27 @@ input[type="number"]:hover, input[type="number"]:focus {
     margin-top: 5px;
     margin-bottom: 5px;
     align-items: center;
+    margin-left: 10px;
 }
 
 .playerFlag {
     height: 30px;
+}
+
+.playerNameLabel {
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.5em;
+    width: 220px;
+    padding-left: 0.5em;
+    display: inline-block;
+}
+
+.playerScoreLabel {
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.5em;
+    width: 20px;
+    padding-left: 0.5em;
+    display: inline-block;
 }

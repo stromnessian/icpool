@@ -3,23 +3,23 @@ const mongoose = require('mongoose')
 const tableSchema = new mongoose.Schema({
     tableNumber: {
         type: Number,
-        required: false,
+        required: false
     },
     player1Name: {
         type: String,
-        required: false,
+        required: false
     },
     player1Score: {
         type: Number,
-        required: false,
+        required: false
     },
     player2Name: {
         type: String,
-        required: false,
+        required: false
     },
     player2Score: {
         type: Number,
-        required: false,
+        required: false
     }    
 })
 

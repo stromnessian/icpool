@@ -7,15 +7,12 @@ GET http://localhost:3000/tables
 
 ###
 
-POST http://localhost:3000/tables
+POST http://localhost:3000/scores
 Content-Type: application/json
 
 {
-    "tableNumber": 4,
-    "player1Name": "Jock Bord",
-    "player1Score": 0,
-    "player2Name": "Terry Yaki",
-    "player2Score": 0
+    "team": "Shetland",
+    "score": 0
 }
 
 ###

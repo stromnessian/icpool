@@ -10,11 +10,19 @@
     <link rel="stylesheet" href="public/styles/style.css">
 </head>
 <body onload=loadValues()>
-    <div class="container" id="scoreboard">
+
+    <!-- MATCH 1 SELECT-->
+    <div>
+        <select class="matchSelect" id="match1Name" onchange=updateMatch(this.id)>
+        </select>
+    </div>
+    
+    <!-- MATCH 1 SCORE-->
+    <div class="matchScore" id="match1Score">
         <img src="public/images/shetland_flag.png" class="mainFlag" id="mainShetlandFlag">
-        <input class="mainScore" id="shetlandScore" type="number" value=0 min=0 onchange=updateScore(this.id)>
+        <input class="teamScore" id="match1Team1Score" type="number" value=0 min=0 onchange=updateScore(this.id)>
         <img src="public/images/orkney_flag.png" class="mainFlag" id="mainOrkneyFlag">
-        <input class="mainScore" id="orkneyScore" type="number" value=0 min=0 onchange=updateScore(this.id)>
+        <input class="teamScore" id="match1Team2Score" type="number" value=0 min=0 onchange=updateScore(this.id)>
     </div>
 
     <div class="table" id="table1"></div>
@@ -153,6 +161,20 @@
                 <input class="playerScore" id="t4p2Score" type="number" value=0 min=0 max=5 onchange=updateTable(this.id)>
             </div>
         </div>
+    </div>
+
+    <!-- MATCH 2 SELECT-->
+    <div>
+        <select class="matchSelect" id="match2Name" onchange=updateMatch(this.id)>
+        </select>
+    </div>
+
+    <!-- MATCH 2 SCORE-->
+    <div class="matchScore" id="match2Score">
+            <img src="public/images/shetland_flag.png" class="mainFlag" id="mainShetlandFlag">
+            <input class="teamScore" id="match2Team1Score" type="number" value=0 min=0 onchange=updateScore(this.id)>
+            <img src="public/images/orkney_flag.png" class="mainFlag" id="mainOrkneyFlag">
+            <input class="teamScore" id="match2Team2Score" type="number" value=0 min=0 onchange=updateScore(this.id)>
     </div>
 
 </body>

@@ -9,17 +9,49 @@ function getAll() {
     getTables()
 }
 
+function getScores() {
+
+}
+
 function getTables() {
     fetch('http://localhost:3000/tables')
     .then(response => response.json())
     .then(data => {
         document.getElementById("t1p1NameLabel").innerHTML = data[0].player1Name
+        document.getElementById("t1p1ScoreLabel").innerHTML = data[0].player1Score
+        document.getElementById("t1p2NameLabel").innerHTML = data[0].player2Name
+        document.getElementById("t1p2ScoreLabel").innerHTML = data[0].player2Score
+
+        document.getElementById("t2p1NameLabel").innerHTML = data[1].player1Name
+        document.getElementById("t2p1ScoreLabel").innerHTML = data[1].player1Score
+        document.getElementById("t2p2NameLabel").innerHTML = data[1].player2Name
+        document.getElementById("t2p2ScoreLabel").innerHTML = data[1].player2Score
+
+        document.getElementById("t1p1NameLabel").innerHTML = data[0].player1Name
+        document.getElementById("t1p1NameLabel").innerHTML = data[0].player1Name
+        document.getElementById("t1p1NameLabel").innerHTML = data[0].player1Name
+        document.getElementById("t1p1NameLabel").innerHTML = data[0].player1Name
+
+        document.getElementById("t1p1NameLabel").innerHTML = data[0].player1Name
+        document.getElementById("t1p1NameLabel").innerHTML = data[0].player1Name
+        document.getElementById("t1p1NameLabel").innerHTML = data[0].player1Name
+        document.getElementById("t1p1NameLabel").innerHTML = data[0].player1Name
+        
     })
 }
 
 
 
 function loadValues () {
+    ////find match dropdowns and populate from scores db
+    var matchDropdowns = document.getElementsByClassName("matchSelect")
+    console.log(matchDropdowns)
+    for(var i=0; i<matchDropdowns.length; i++)
+    {
+        var id = matchDropdowns[i].id
+        loadMatches(id)
+    }
+
     //find player dropdowns and populate from players db
     var playerDropdowns = document.getElementsByClassName("playerSelect")
     console.log(playerDropdowns)
@@ -37,6 +69,20 @@ function loadValues () {
         score.value = 0
     }
  
+}
+
+function loadMatches(id) {
+    let dropdown = $("#" + id)
+    dropdown.empty()
+
+    dropdown.append('<option selected="true" disabled>Choose Match</option>')
+    dropdown.prop('selectedIndex', 0)
+
+    $.getJSON('matches', function (data) {
+        $.each(data, function (key, entry) {
+            dropdown.append($('<option></option>').attr('value', entry.name).text(entry.name))
+        })
+    })
 }
 
 function loadPlayers(id) {

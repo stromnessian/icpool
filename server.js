@@ -29,4 +29,10 @@ app.use('/players', playersRouter)
 const tablesRouter = require('./routes/tables')
 app.use('/tables', tablesRouter)
 
+const scoresRouter = require('./routes/scores')
+app.use('/scores', scoresRouter)
+
+const matchesRouter = require('./routes/matches')
+app.use('/matches', matchesRouter)
+
 app.listen(port, () => console.log('Server Started'))

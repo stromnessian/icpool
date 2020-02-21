@@ -3,12 +3,12 @@ const mongoose = require('mongoose')
 const playerSchema = new mongoose.Schema({
     name: {
         type: String,
-        required: true,
+        required: true
     },
     county: {
         type: String,
         enum: ['Orkney', 'Shetland'],
-        required: true,
+        required: true
     },
 })
 
