@@ -15,6 +15,9 @@ db.once('open', () => console.log('Connected to database'))
 app.use(express.json())
 
 app.use("/public",express.static(__dirname + '/public'))
+app.get('/update', function (req, res) {
+    res.sendFile(path.join(__dirname + '/update.html'))
+})
 
 app.get('/', function (req, res) {
     res.sendFile(path.join(__dirname + '/index.html'))

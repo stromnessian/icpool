@@ -55,11 +55,11 @@ input[type="number"]:hover, input[type="number"]:focus {
     font-weight: bold;
 }
 
-.playerSelect {
-    color: black;
+.playerSelect, .playerNameLabel {
+    color: red;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 1.5em;
-    width: 10em;
+    width: 100px;
     padding-left: 0.5em;
 }
 

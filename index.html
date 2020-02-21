@@ -9,12 +9,12 @@
     <script src="public/scripts/script.js" defer></script>
     <link rel="stylesheet" href="public/styles/style.css">
 </head>
-<body onload=loadValues()>
+<body onload=getTables()>
     <div class="container" id="scoreboard">
         <img src="public/images/shetland_flag.png" class="mainFlag" id="mainShetlandFlag">
-        <input class="mainScore" id="shetlandScore" type="number" value=0 min=0 onchange=saveValue(this)>
+        <label class="mainScoreLabel" id="shetlandScoreLabel" type="number">
         <img src="public/images/orkney_flag.png" class="mainFlag" id="mainOrkneyFlag">
-        <input class="mainScore" id="orkneyScore" type="number" value=0 min=0 onchange=saveValue(this)>
+        <label class="mainScoreLabel" id="orkneyScoreLabel" type="number">
     </div>
 
     <div class="table" id="table1"></div>
@@ -28,11 +28,10 @@
                 <img src="public/images/shetland_flag.png" class="playerFlag" id="t1p1Flag">
             </div>
             <div>
-                <select class="playerSelect" id="t1p1Name" onchange=saveValue(this)>
-                </select>
+                <label class="playerNameLabel" id="t1p1NameLabel">WTF</label>
             </div>
             <div>
-                <input class="playerScore" id="t1p1Score" type="number" value=0 min=0 max=5 onchange=saveValue(this)>
+                <input class="playerScore" id="t1p1Score" type="number" value=0 min=0 max=5 onchange=updateTable(this.id)>
             </div>
         </div>
 
@@ -42,11 +41,11 @@
                 <img src="public/images/orkney_flag.png" class="playerFlag" id="t1p1Flag">
             </div>
             <div>
-                <select class="playerSelect" id="t1p2Name" onchange=saveValue(this)>
+                <select class="playerSelect" id="t1p2Name" onchange=updateTable(this.id)>
                 </select>
             </div>
             <div>
-                <input class="playerScore" id="t1p2Score" type="number" value=0 min=0 max=5 onchange=saveValue(this)>
+                <input class="playerScore" id="t1p2Score" type="number" value=0 min=0 max=5 onchange=updateTable(this.id)>
             </div>
         </div>
     </div>
@@ -63,10 +62,10 @@
                 <img src="public/images/shetland_flag.png" class="playerFlag" id="t2p1Flag">
             </div>
             <div>
-                <select class="playerSelect" id="t2p1Name" onchange=saveValue(this)>
+                <select class="playerSelect" id="t2p1Name" onchange=updateTable(this.id)>
                 </select>
             </div>
-                <input class="playerScore" id="t2p1Score" type="number" value=0 min=0 max=5 onchange=saveValue(this)>
+                <input class="playerScore" id="t2p1Score" type="number" value=0 min=0 max=5 onchange=updateTable(this.id)>
             </div>
         </div>
 
@@ -76,11 +75,11 @@
                 <img src="public/images/orkney_flag.png" class="playerFlag" id="t2p1Flag">
             </div>
             <div>
-                <select class="playerSelect" id="t2p2Name" onchange=saveValue(this)>
+                <select class="playerSelect" id="t2p2Name" onchange=updateTable(this.id)>
                 </select>
             </div>
             <div>
-                <input class="playerScore" id="t2p2Score" type="number" value=0 min=0 max=5 onchange=saveValue(this)>
+                <input class="playerScore" id="t2p2Score" type="number" value=0 min=0 max=5 onchange=updateTable(this.id)>
             </div>
         </div>
     </div>
@@ -97,11 +96,11 @@
                 <img src="public/images/shetland_flag.png" class="playerFlag" id="t3p1Flag">
             </div>
             <div>
-                <select class="playerSelect" id="t3p1Name" onchange=saveValue(this)>
+                <select class="playerSelect" id="t3p1Name" onchange=updateTable(this.id)>
                 </select>
             </div>
             <div>
-                <input class="playerScore" id="t3p1Score" type="number" value=0 min=0 max=5 onchange=saveValue(this)>
+                <input class="playerScore" id="t3p1Score" type="number" value=0 min=0 max=5 onchange=updateTable(this.id)>
             </div>
         </div>
 
@@ -111,11 +110,11 @@
                 <img src="public/images/orkney_flag.png" class="playerFlag" id="t3p1Flag">
             </div>
             <div>
-                <select class="playerSelect" id="t3p2Name" onchange=saveValue(this)>
+                <select class="playerSelect" id="t3p2Name" onchange=updateTable(this.id)>
                 </select>
             </div>
             <div>
-                <input class="playerScore" id="t3p2Score" type="number" value=0 min=0 max=5 onchange=saveValue(this)>
+                <input class="playerScore" id="t3p2Score" type="number" value=0 min=0 max=5 onchange=updateTable(this.id)>
             </div>
         </div>
     </div>
@@ -132,11 +131,11 @@
                 <img src="public/images/shetland_flag.png" class="playerFlag" id="t4p1Flag">
             </div>
             <div>
-                <select class="playerSelect" id="t4p1Name" onchange=saveValue(this)>
+                <select class="playerSelect" id="t4p1Name" onchange=updateTable(this.id)>
                 </select>
             </div>
             <div>
-                <input class="playerScore" id="t4p1Score" type="number" value=0 min=0 max=5 onchange=saveValue(this)>
+                <input class="playerScore" id="t4p1Score" type="number" value=0 min=0 max=5 onchange=updateTable(this.id)>
             </div>
         </div>
 
@@ -146,11 +145,11 @@
                 <img src="public/images/orkney_flag.png" class="playerFlag" id="t4p1Flag">
             </div>
             <div>
-                <select class="playerSelect" id="t4p2Name" onchange=saveValue(this)>
+                <select class="playerSelect" id="t4p2Name" onchange=updateTable(this.id)>
                 </select>
             </div>
             <div>
-                <input class="playerScore" id="t4p2Score" type="number" value=0 min=0 max=5 onchange=saveValue(this)>
+                <input class="playerScore" id="t4p2Score" type="number" value=0 min=0 max=5 onchange=updateTable(this.id)>
             </div>
         </div>
     </div>
