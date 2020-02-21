@@ -4,6 +4,7 @@ body {
     margin-left: 1rem;
     margin-right: 1rem;
     margin-bottom: 1rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 select {
@@ -29,6 +30,10 @@ input[type="number"]:hover, input[type="number"]:focus {
 .mainFlag {
     height: 60px;
     margin-left: 0.5em;
+}
+
+.match {
+    display: flex;
 }
 
 .matchSelect {

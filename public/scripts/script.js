@@ -5,12 +5,19 @@
 
 //
 function getAll() {
-    //getScores()
+    getScores()
     getTables()
 }
 
 function getScores() {
-
+    fetch('http://localhost:3000/scores')
+    .then(response => response.json())
+    .then(data => {
+        document.getElementById("match1Score1Label").innerHTML = data[0].score1
+        document.getElementById("match1Score2Label").innerHTML = data[0].score2
+        document.getElementById("match2Score1Label").innerHTML = data[1].score1
+        document.getElementById("match2Score2Label").innerHTML = data[1].score2
+    })
 }
 
 function getTables() {
@@ -27,16 +34,15 @@ function getTables() {
         document.getElementById("t2p2NameLabel").innerHTML = data[1].player2Name
         document.getElementById("t2p2ScoreLabel").innerHTML = data[1].player2Score
 
-        document.getElementById("t1p1NameLabel").innerHTML = data[0].player1Name
-        document.getElementById("t1p1NameLabel").innerHTML = data[0].player1Name
-        document.getElementById("t1p1NameLabel").innerHTML = data[0].player1Name
-        document.getElementById("t1p1NameLabel").innerHTML = data[0].player1Name
+        document.getElementById("t3p1NameLabel").innerHTML = data[2].player1Name
+        document.getElementById("t3p1ScoreLabel").innerHTML = data[2].player1Score
+        document.getElementById("t3p2NameLabel").innerHTML = data[2].player2Name
+        document.getElementById("t3p2ScoreLabel").innerHTML = data[2].player2Score
 
-        document.getElementById("t1p1NameLabel").innerHTML = data[0].player1Name
-        document.getElementById("t1p1NameLabel").innerHTML = data[0].player1Name
-        document.getElementById("t1p1NameLabel").innerHTML = data[0].player1Name
-        document.getElementById("t1p1NameLabel").innerHTML = data[0].player1Name
-        
+        document.getElementById("t4p1NameLabel").innerHTML = data[3].player1Name
+        document.getElementById("t4p1ScoreLabel").innerHTML = data[3].player1Score
+        document.getElementById("t4p2NameLabel").innerHTML = data[3].player2Name
+        document.getElementById("t4p2ScoreLabel").innerHTML = data[3].player2Score
     })
 }
 
@@ -174,6 +180,39 @@ function updateTable(calledFrom) {
             break
     }
     fetch(`http://localhost:3000/tables/${id}`, {
+        headers: { "Content-Type": "application/json; charset=utf-8" },
+        method: 'PATCH',
+        body: JSON.stringify(data)
+    })
+}
+
+function updateScore(calledFrom) {
+    console.log(calledFrom)
+    var scoreNumber = calledFrom.substring(5,6)
+    var value = document.getElementById(calledFrom).value
+    switch (calledFrom) {
+        case "match1Score1":
+            var data = {"score1": value}
+            break
+        case "match1Score2":
+            var data = {"score2": value}
+            break
+        case "match2Score1":
+            var data = {"score1": value}
+            break
+        case "match2Score2":
+            var data = {"score2": value}
+            break
+    }
+    switch (scoreNumber) {
+        case "1":
+            var id = '5e5006f58106cd18882287d2'
+            break
+        case "2":
+            var id = '5e5007038106cd18882287d3'
+            break
+    }
+    fetch(`http://localhost:3000/scores/${id}`, {
         headers: { "Content-Type": "application/json; charset=utf-8" },
         method: 'PATCH',
         body: JSON.stringify(data)
