@@ -19,7 +19,8 @@ router.get('/:id', getScore, (req, res) => {
 // Creating one
 router.post('/', async (req, res) => {
     const score = new Score({
-        match: req.body.match,
+        number: req.body.number,
+        name: req.body.name,
         team1: req.body.team1,
         score1: req.body.score1,
         team2: req.body.team2,
@@ -36,8 +37,11 @@ router.post('/', async (req, res) => {
 
 // Updating one
 router.patch('/:id',getScore, async (req, res) => {
-    if (req.body.match != null) {
-        res.score.match = req.body.match
+    if (req.body.number != null) {
+        res.score.number = req.body.number
+    }
+    if (req.body.name != null) {
+        res.score.name = req.body.name
     }
     if (req.body.team1 != null) {
         res.score.team1 = req.body.team1

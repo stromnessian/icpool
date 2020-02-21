@@ -1,8 +1,12 @@
 const mongoose = require('mongoose')
 
 const scoreSchema = new mongoose.Schema({
-    match: {
+    number: {
         type: Number,
+        required: false
+    },
+    name: {
+        type: String,
         required: false
     },
     team1: {

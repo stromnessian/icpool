@@ -3,7 +3,7 @@ GET http://localhost:3000/players
 ###
 
 
-GET http://localhost:3000/tables
+GET http://localhost:3000/scores
 
 ###
 
@@ -11,13 +11,17 @@ POST http://localhost:3000/scores
 Content-Type: application/json
 
 {
-    "team": "Shetland",
-    "score": 0
+    "number": 1,
+    "name": "Men's A",
+    "team1": "Shetland",
+    "score1": 3,
+    "team2": "Orkney",
+    "score2": 9
 }
 
 ###
 
-DELETE http://localhost:3000/tables/5e486f79b844051b88904d34
+DELETE http://localhost:3000/scores/5e5007038106cd18882287d3
 
 ###
 

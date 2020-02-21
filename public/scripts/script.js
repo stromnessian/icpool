@@ -5,8 +5,18 @@
 
 //
 function getAll() {
+    getMatches()
     getScores()
     getTables()
+}
+
+function getMatches() {
+    fetch('http://localhost:3000/scores')
+    .then(response => response.json())
+    .then(data => {
+        document.getElementById("match1Label").innerHTML = data[0].name
+        document.getElementById("match2Label").innerHTML = data[1].name
+    })
 }
 
 function getScores() {
@@ -206,10 +216,37 @@ function updateScore(calledFrom) {
     }
     switch (scoreNumber) {
         case "1":
-            var id = '5e5006f58106cd18882287d2'
+            var id = '5e50548f13f5a033bc41080c'
             break
         case "2":
-            var id = '5e5007038106cd18882287d3'
+            var id = '5e50549413f5a033bc41080d'
+            break
+    }
+    fetch(`http://localhost:3000/scores/${id}`, {
+        headers: { "Content-Type": "application/json; charset=utf-8" },
+        method: 'PATCH',
+        body: JSON.stringify(data)
+    })
+}
+
+function updateMatch(calledFrom) {
+    console.log(calledFrom)
+    var number = calledFrom.substring(5,6)
+    var value = document.getElementById(calledFrom).value
+    switch (calledFrom) {
+        case "match1Name":
+            var data = {"name": value}
+            break
+        case "match2Name":
+            var data = {"name": value}
+            break
+    }
+    switch (number) {
+        case "1":
+            var id = '5e50548f13f5a033bc41080c'
+            break
+        case "2":
+            var id = '5e50549413f5a033bc41080d'
             break
     }
     fetch(`http://localhost:3000/scores/${id}`, {
