@@ -5,7 +5,10 @@ var port = process.env.PORT || 3000
 const path = require('path')
 const express = require('express')
 const app = express()
+const http = require('http').createServer(app)
 const mongoose = require('mongoose')
+
+const io = require('socket.io')(http)
 
 mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true, useUnifiedTopology: true })
 const db = mongoose.connection
@@ -35,4 +38,13 @@ app.use('/scores', scoresRouter)
 const matchesRouter = require('./routes/matches')
 app.use('/matches', matchesRouter)
 
-app.listen(port, () => console.log('Server Started'))
+io.on('connection', function(socket) {
+    console.log("A user connected")
+    socket.on('disconnect', function(){
+        console.log('user disconnected');
+        });
+})
+
+//app.listen(port, () => console.log('Server Started'))
+
+http.listen(3000, () => console.log("http listening"))
