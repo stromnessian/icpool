@@ -1,3 +1,5 @@
+
+
 require('dotenv').config()
 
 var port = process.env.PORT || 3000
@@ -38,8 +40,23 @@ app.use('/scores', scoresRouter)
 const matchesRouter = require('./routes/matches')
 app.use('/matches', matchesRouter)
 
-io.on('connection', function(socket) {
+io.on('connection', async function(socket) {
     console.log("A user connected")
+
+    //send scores to client
+    const Score = require('./models/score')
+    const scores = await Score.find()
+    socket.emit('scores', scores)
+
+    //send tables to client
+    const Table = require('./models/table')
+    const tables = await Table.find()
+    socket.emit('tables', tables)
+
+    socket.on('updateTable', table => {
+        console.log('Incoming table... ' + table)
+    })
+
     socket.on('disconnect', function(){
         console.log('user disconnected');
         });

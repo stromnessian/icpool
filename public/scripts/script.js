@@ -1,61 +1,10 @@
-//import { get } from "mongoose"
+var socket = io.connect();
 
-//import { response } from "express"
-//import { json } from "body-parser"
-
-//
-function getAll() {
-    getMatches()
-    getScores()
-    getTables()
+if (socket !== undefined) {
+        console.log('Connected to socket...');
+} else {
+    console.log('socket is undefined')
 }
-
-function getMatches() {
-    fetch('http://localhost:3000/scores')
-    .then(response => response.json())
-    .then(data => {
-        document.getElementById("match1Label").innerHTML = data[0].name
-        document.getElementById("match2Label").innerHTML = data[1].name
-    })
-}
-
-function getScores() {
-    fetch('http://localhost:3000/scores')
-    .then(response => response.json())
-    .then(data => {
-        document.getElementById("match1Score1Label").innerHTML = data[0].score1
-        document.getElementById("match1Score2Label").innerHTML = data[0].score2
-        document.getElementById("match2Score1Label").innerHTML = data[1].score1
-        document.getElementById("match2Score2Label").innerHTML = data[1].score2
-    })
-}
-
-function getTables() {
-    fetch('http://localhost:3000/tables')
-    .then(response => response.json())
-    .then(data => {
-        document.getElementById("t1p1NameLabel").innerHTML = data[0].player1Name
-        document.getElementById("t1p1ScoreLabel").innerHTML = data[0].player1Score
-        document.getElementById("t1p2NameLabel").innerHTML = data[0].player2Name
-        document.getElementById("t1p2ScoreLabel").innerHTML = data[0].player2Score
-
-        document.getElementById("t2p1NameLabel").innerHTML = data[1].player1Name
-        document.getElementById("t2p1ScoreLabel").innerHTML = data[1].player1Score
-        document.getElementById("t2p2NameLabel").innerHTML = data[1].player2Name
-        document.getElementById("t2p2ScoreLabel").innerHTML = data[1].player2Score
-
-        document.getElementById("t3p1NameLabel").innerHTML = data[2].player1Name
-        document.getElementById("t3p1ScoreLabel").innerHTML = data[2].player1Score
-        document.getElementById("t3p2NameLabel").innerHTML = data[2].player2Name
-        document.getElementById("t3p2ScoreLabel").innerHTML = data[2].player2Score
-
-        document.getElementById("t4p1NameLabel").innerHTML = data[3].player1Name
-        document.getElementById("t4p1ScoreLabel").innerHTML = data[3].player1Score
-        document.getElementById("t4p2NameLabel").innerHTML = data[3].player2Name
-        document.getElementById("t4p2ScoreLabel").innerHTML = data[3].player2Score
-    })
-}
-
 
 
 function loadValues () {
@@ -189,6 +138,7 @@ function updateTable(calledFrom) {
             var id = '5e4ef575ce133b0e043776b0'
             break
     }
+    socket.emit('updateTable', data)
     fetch(`http://localhost:3000/tables/${id}`, {
         headers: { "Content-Type": "application/json; charset=utf-8" },
         method: 'PATCH',

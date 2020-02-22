@@ -11,11 +11,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="/socket.io/socket.io.js"></script>
-    <script>
-        var socket = io();
-    </script>
 </head>
-<body onload=getAll()>
+<body>
     <div class="match">
         <div>
             <label class="matchLabel" id="match1Label"></label>
@@ -180,5 +177,80 @@
         </div>
     </div>
 
+    <script>
+        var socket = io.connect();
+        if (socket !== undefined) {
+                console.log('Connected to socket...');
+        } else {
+            console.log('socket is undefined')
+        }
+
+        socket.on('scores', scores => {
+            console.log('Getting scores...')
+            console.log(scores)
+            score1 = scores[0]
+            score2 = scores[1]
+
+            var match1Label = document.getElementById('match1Label')
+            match1Label.innerHTML = score1.name
+            var match1Score1Label = document.getElementById('match1Score1Label')
+            match1Score1Label.innerHTML = score1.score1
+            var match1Score1Label = document.getElementById('match1Score2Label')
+            match1Score2Label.innerHTML = score1.score2
+
+            var match2Label = document.getElementById('match2Label')
+            match2Label.innerHTML = score2.name
+            var match2Score1Label = document.getElementById('match2Score1Label')
+            match2Score1Label.innerHTML = score2.score1
+            var match2Score2Label = document.getElementById('match2Score2Label')
+            match2Score2Label.innerHTML = score2.score2
+        })
+
+        socket.on('tables', tables => {
+        console.log('Getting tables...')
+        console.log(tables)
+        table1 = tables[0]
+        table2 = tables[1]
+        table3 = tables[2]
+        table4 = tables[3]
+
+        var t1p1Name1Label = document.getElementById('t1p1NameLabel')
+        t1p1Name1Label.innerHTML = table1.player1Name
+        var t1p1ScoreLabel = document.getElementById('t1p1ScoreLabel')
+        t1p1ScoreLabel.innerHTML = table1.player1Score
+        var t1p2Name1Label = document.getElementById('t1p2NameLabel')
+        t1p2Name1Label.innerHTML = table1.player2Name
+        var t1p2ScoreLabel = document.getElementById('t1p2ScoreLabel')
+        t1p2ScoreLabel.innerHTML = table1.player2Score
+
+        var t2p1Name1Label = document.getElementById('t2p1NameLabel')
+        t2p1Name1Label.innerHTML = table2.player1Name
+        var t2p1ScoreLabel = document.getElementById('t2p1ScoreLabel')
+        t2p1ScoreLabel.innerHTML = table2.player1Score
+        var t2p2Name1Label = document.getElementById('t2p2NameLabel')
+        t2p2Name1Label.innerHTML = table2.player2Name
+        var t2p2ScoreLabel = document.getElementById('t2p2ScoreLabel')
+        t2p2ScoreLabel.innerHTML = table2.player2Score
+
+        var t3p1Name1Label = document.getElementById('t3p1NameLabel')
+        t3p1Name1Label.innerHTML = table3.player1Name
+        var t3p1ScoreLabel = document.getElementById('t3p1ScoreLabel')
+        t3p1ScoreLabel.innerHTML = table3.player1Score
+        var t3p2Name1Label = document.getElementById('t3p2NameLabel')
+        t3p2Name1Label.innerHTML = table3.player2Name
+        var t3p2ScoreLabel = document.getElementById('t3p2ScoreLabel')
+        t3p2ScoreLabel.innerHTML = table3.player2Score
+
+        var t4p1Name1Label = document.getElementById('t4p1NameLabel')
+        t4p1Name1Label.innerHTML = table4.player1Name
+        var t4p1ScoreLabel = document.getElementById('t4p1ScoreLabel')
+        t4p1ScoreLabel.innerHTML = table4.player1Score
+        var t4p2Name1Label = document.getElementById('t4p2NameLabel')
+        t4p2Name1Label.innerHTML = table4.player2Name
+        var t4p2ScoreLabel = document.getElementById('t4p2ScoreLabel')
+        t4p2ScoreLabel.innerHTML = table4.player2Score
+        })
+
+    </script>
 </body>
 </html>
