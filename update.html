@@ -12,19 +12,20 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </head>
 <body onload=loadValues()>
-
+    <div class="match">
     <!-- MATCH 1 SELECT-->
-    <div>
-        <select class="matchSelect" id="match1Name" onchange=updateMatch(this.id)>
-        </select>
-    </div>
-    
-    <!-- MATCH 1 SCORE-->
-    <div class="matchScore" id="match1Score">
-        <img src="public/images/shetland_flag.png" class="mainFlag" id="mainShetlandFlag">
-        <input class="teamScore" id="match1Score1" type="number" value=0 min=0 onchange=updateScore(this.id)>
-        <img src="public/images/orkney_flag.png" class="mainFlag" id="mainOrkneyFlag">
-        <input class="teamScore" id="match1Score2" type="number" value=0 min=0 onchange=updateScore(this.id)>
+        <div>
+            <select class="matchSelect" id="match1Name" onchange=updateMatch(this.id)>
+            </select>
+        </div>
+        
+        <!-- MATCH 1 SCORE-->
+        <div class="matchScore" id="match1Score">
+            <img src="public/images/shetland_flag.png" class="mainFlag" id="mainShetlandFlag">
+            <input class="teamScore" id="match1Score1" type="number" value=0 min=0 onchange=updateScore(this.id)>
+            <img src="public/images/orkney_flag.png" class="mainFlag" id="mainOrkneyFlag">
+            <input class="teamScore" id="match1Score2" type="number" value=0 min=0 onchange=updateScore(this.id)>
+        </div>
     </div>
 
     <div class="table" id="table1"></div>
@@ -164,7 +165,9 @@
             </div>
         </div>
     </div>
+    <div></div>
 
+    <div class="match">
     <!-- MATCH 2 SELECT-->
     <div>
         <select class="matchSelect" id="match2Name" onchange=updateMatch(this.id)>
@@ -177,6 +180,7 @@
             <input class="teamScore" id="match2Score1" type="number" value=0 min=0 onchange=updateScore(this.id)>
             <img src="public/images/orkney_flag.png" class="mainFlag" id="mainOrkneyFlag">
             <input class="teamScore" id="match2Score2" type="number" value=0 min=0 onchange=updateScore(this.id)>
+    </div>
     </div>
 
 </body>

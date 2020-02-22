@@ -18,6 +18,7 @@ input[type="number"] {
     border: 0;
     outline: 0;
     -moz-appearance: textfield;
+    background-color: lightslategray;
 }
 
 input[type="number"]:hover, input[type="number"]:focus {
@@ -44,6 +45,8 @@ input[type="number"]:hover, input[type="number"]:focus {
     font-stretch: ultra-expanded;
     text-align: center;
     margin-right: 3em;
+    margin-left: 2em;
+    background-color: lightslategray;
 }
 
 #match2Name {
@@ -56,9 +59,7 @@ input[type="number"]:hover, input[type="number"]:focus {
     display: inline-flex;
 }
 
-#match1Score {
-    margin-bottom: 2em;
-}
+
 
 #match2Score {
     margin-top: 0.5em;
