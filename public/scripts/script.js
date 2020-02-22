@@ -108,33 +108,33 @@ var getObjectByValue = function (url, key, value) {
 
 function updateTable(calledFrom) {
     console.log(calledFrom)
-    var tableNumber = calledFrom.substring(1,2)
+    var tableNumber = parseInt(calledFrom.substring(1,2))
     var value = document.getElementById(calledFrom).value
     switch (calledFrom.substring(2,5)) {
         case "p1N":
-            var data = {"player1Name": value}
+            var data = {"tableNumber": tableNumber, "player1Name": value}
             break
         case "p1S":
-            var data = {"player1Score": value}
+            var data = {"tableNumber": tableNumber, "player1Score": value}
             break
         case "p2N":
-            var data = {"player2Name": value}
+            var data = {"tableNumber": tableNumber, "player2Name": value}
             break
         case "p2S":
-            var data = {"player2Score": value}
+            var data = {"tableNumber": tableNumber, "player2Score": value}
             break
     }
     switch (tableNumber) {
-        case "1":
+        case 1:
             var id = '5e4eb179ce133b0e043776a6'
             break
-        case "2":
+        case 2:
             var id = '5e4ef566ce133b0e043776ae'
             break
-        case "3":
+        case 3:
             var id = '5e4ef570ce133b0e043776af'
             break
-        case "4":
+        case 4:
             var id = '5e4ef575ce133b0e043776b0'
             break
     }
@@ -148,30 +148,31 @@ function updateTable(calledFrom) {
 
 function updateScore(calledFrom) {
     console.log(calledFrom)
-    var scoreNumber = calledFrom.substring(5,6)
+    var scoreNumber = parseInt(calledFrom.substring(5,6))
     var value = document.getElementById(calledFrom).value
     switch (calledFrom) {
         case "match1Score1":
-            var data = {"score1": value}
+            var data = {"number": 1, "score1": value}
             break
         case "match1Score2":
-            var data = {"score2": value}
+            var data = {"number": 1, "score2": value}
             break
         case "match2Score1":
-            var data = {"score1": value}
+            var data = {"number": 2, "score1": value}
             break
         case "match2Score2":
-            var data = {"score2": value}
+            var data = {"number": 2, "score2": value}
             break
     }
     switch (scoreNumber) {
-        case "1":
+        case 1:
             var id = '5e50548f13f5a033bc41080c'
             break
-        case "2":
+        case 2:
             var id = '5e50549413f5a033bc41080d'
             break
     }
+    socket.emit('updateScore', data)
     fetch(`http://localhost:3000/scores/${id}`, {
         headers: { "Content-Type": "application/json; charset=utf-8" },
         method: 'PATCH',

@@ -251,6 +251,46 @@
         t4p2ScoreLabel.innerHTML = table4.player2Score
         })
 
+        socket.on('tableChange', table => {
+            console.log('Table changed...')
+            var tableNumber = table.tableNumber
+            if (table.player1Name) {
+                var elementId = "t" + tableNumber + "p1NameLabel"
+                var element = document.getElementById(elementId)
+                element.innerHTML = table.player1Name
+            }
+            if (table.player1Score) {
+                var elementId = "t" + tableNumber + "p1ScoreLabel"
+                var element = document.getElementById(elementId)
+                element.innerHTML = table.player1Score
+            }
+            if (table.player2Name) {
+                var elementId = "t" + tableNumber + "p2NameLabel"
+                var element = document.getElementById(elementId)
+                element.innerHTML = table.player2Name
+            }
+            if (table.player2Score) {
+                var elementId = "t" + tableNumber + "p2ScoreLabel"
+                var element = document.getElementById(elementId)
+                element.innerHTML = table.player2Score
+            }
+        })
+
+        socket.on('scoreChange', score => {
+            console.log('Score changed...')
+            var scoreNumber = score.number
+            if (score.score1) {
+                var elementId = "match" + scoreNumber + "Score1Label"
+                var element = document.getElementById(elementId)
+                element.innerHTML = score.score1
+            }
+            if (score.score2) {
+                var elementId = "match" + scoreNumber + "Score2Label"
+                var element = document.getElementById(elementId)
+                element.innerHTML = score.score2
+            }
+        })
+
     </script>
 </body>
 </html>

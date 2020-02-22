@@ -54,7 +54,13 @@ io.on('connection', async function(socket) {
     socket.emit('tables', tables)
 
     socket.on('updateTable', table => {
-        console.log('Incoming table... ' + table)
+        console.log('Incoming table...')
+        socket.broadcast.emit('tableChange', table)
+    })
+
+    socket.on('updateScore', score => {
+        console.log('Incoming table...')
+        socket.broadcast.emit('scoreChange', score)
     })
 
     socket.on('disconnect', function(){

@@ -184,5 +184,83 @@
     </div>
     </div>
 
+
+    <!-- socket.io -->
+    <script>
+        var socket = io.connect();
+        if (socket !== undefined) {
+                console.log('Connected to socket...');
+        } else {
+            console.log('socket is undefined')
+        }
+
+        socket.on('scores', scores => {
+            console.log('Getting scores...')
+            console.log(scores)
+            score1 = scores[0]
+            score2 = scores[1]
+
+            var match1 = document.getElementById('match1Name')
+            match1.value = score1.name
+            var match1Score1 = document.getElementById('match1Score1')
+            match1Score1.value = score1.score1
+            var match1Score1 = document.getElementById('match1Score2')
+            match1Score2.value = score1.score2
+
+            var match2 = document.getElementById('match2Name')
+            match2.value = score2.name
+            var match2Score1 = document.getElementById('match2Score1')
+            match2Score1.value = score2.score1
+            var match2Score2 = document.getElementById('match2Score2')
+            match2Score2.value = score2.score2
+        })
+
+        socket.on('tables', tables => {
+        console.log('Getting tables...')
+        console.log(tables)
+        table1 = tables[0]
+        table2 = tables[1]
+        table3 = tables[2]
+        table4 = tables[3]
+
+        var t1p1Name = document.getElementById('t1p1Name')
+        t1p1Name.value = table1.player1Name
+        var t1p1Score = document.getElementById('t1p1Score')
+        t1p1Score.value = table1.player1Score
+        var t1p2Name = document.getElementById('t1p2Name')
+        t1p2Name.value = table1.player2Name
+        var t1p2Score = document.getElementById('t1p2Score')
+        t1p2Score.value = table1.player2Score
+
+        var t2p1Name = document.getElementById('t2p1Name')
+        t2p1Name.value = table2.player1Name
+        var t2p1Score = document.getElementById('t2p1Score')
+        t2p1Score.value = table2.player1Score
+        var t2p2Name = document.getElementById('t2p2Name')
+        t2p2Name.value = table2.player2Name
+        var t2p2Score = document.getElementById('t2p2Score')
+        t2p2Score.value = table2.player2Score
+
+        var t3p1Name = document.getElementById('t3p1Name')
+        t3p1Name.value = table3.player1Name
+        var t3p1Score = document.getElementById('t3p1Score')
+        t3p1Score.value = table3.player1Score
+        var t3p2Name = document.getElementById('t3p2Name')
+        t3p2Name.value = table3.player2Name
+        var t3p2Score = document.getElementById('t3p2Score')
+        t3p2Score.value = table3.player2Score
+
+        var t4p1Name = document.getElementById('t4p1Name')
+        t4p1Name.value = table4.player1Name
+        var t4p1Score = document.getElementById('t4p1Score')
+        t4p1Score.value = table4.player1Score
+        var t4p2Name = document.getElementById('t4p2Name')
+        t4p2Name.value = table4.player2Name
+        var t4p2Score = document.getElementById('t4p2Score')
+        t4p2Score.value = table4.player2Score
+        })
+</script>
+
+
 </body>
 </html>
