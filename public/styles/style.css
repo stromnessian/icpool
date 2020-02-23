@@ -1,9 +1,15 @@
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: green;
+}
+
+
 /* --- COMPETITION TITLE DIV --- */
 .competition {
     position: absolute;
     width: 1280px;
     height: 90px;
-    background-color: lightslategray;
+    background-color: wheat;
 }
 
 .competitionLabel {
@@ -11,13 +17,10 @@
     top: 5px;
     left: 60px;
     width: 1280px;
-    height: 90px;
-    color: black;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 48px;
-    font-style: italic;
-    font-weight: bold;
-    font-stretch: ultra-expanded;
+    color: black;
+    font-weight: bolder;
+    text-shadow: 1px 1px 2px lightcoral, 0 0 5px gold;
 }
 /* ^^^ COMPETITION TITLE DIV^^^ */
 
@@ -27,7 +30,7 @@
     position: absolute;
     width: 1280px;
     height: 90px;
-    background-color: lightgray;
+    background-color: gold;
 }
 
 #score1 {
@@ -49,11 +52,10 @@
     top: 5px;
     left: 480px;
     color: black;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 50px;
-    font-style: italic;
-    font-weight: bold;
-    font-stretch: ultra-expanded;
+    font-size: 48px;
+    color: black;
+    font-weight: bolder;
+    text-shadow: 1px 1px 2px lightcoral, 0 0 5px gold;
 }
 /* ^^^ MATCH NAME ^^^ */
 
@@ -81,11 +83,10 @@
 /* --- MATCH SCORES --- */
 .matchScoreLabel {
     position: absolute;
-    font-size: 50px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-style: italic;
-    font-weight: bold;
-    font-stretch: ultra-expanded;
+    font-size: 48px;
+    color: black;
+    font-weight: bolder;
+    text-shadow: 1px 1px 2px lightcoral, 0 0 5px gold;
 }
 
 #match1Score1Label, #match2Score1Label {
@@ -100,98 +101,113 @@
 /* ^^^ MATCH SCORES ^^^ */
 
 
-/* --- MAIN TABLE DIV --- */
-.mainTableScore {
+.tableLabel {
     position: absolute;
-    top: 180px;
-    left: 0px;
-    background-color: aquamarine;
-    width: 1280px;
-    height: 720px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
 }
-/* --- MAIN TABLE DIV --- */
 
-.mainTableLabel {
+
+/* --- TABLE SCOREBOARD DIV --- */
+.tableScoreboard {
+    position: absolute;
+    background-color: wheat;
+    width: 630px;
+    height: 40px;
+    border-radius: 10px;
+}
+/* --- MAIN TABLE LABEL --- */
+
+#mainTableLabel {
+    position: absolute;
+    top: 200px;
+    left: 20px;
+    font-size: 25px;
+    background-color: wheat;
+}
+
+.playerFlag {
+    position: absolute;
+    bottom: 5px;
+    height: 30px;
+}
+
+.playerName {
     position: absolute;
     top: 0px;
-    left: 0px;
-    font-size: 25px;
+    font-size: 24px;
+    font-weight: bold;
 }
 
-.mainTableFlag {
+.playerScore {
     position: absolute;
-    height: 25px;
-}
-
-#mainTablePlayer1Flag {
-    top: 800px;
-    left: 400px;
-}
-
-#mainTablePlayer2Flag {
-    top: 640px;
-    left: 640px;
-}
-
-.mainTablePlayer {
-    position: absolute;
+    top: 0px;
     font-size: 25px;
+    font-weight: bold;
+    background-color: gold;
+    border-radius: 5px;
+    padding-bottom: 2px;
+    padding-left: 2px;
+    padding-right: 2px;
 }
 
-.mainTablePlayer1 {
+.player1Flag {
+    left: 5px;
+}
+
+.player1Name {
+    left: 50px;
+}
+
+.player1Score {
+    left: 290px;
+}
+
+.player2Flag {
+    left: 320px;
+}
+
+.player2Name {
+    left: 365px;
+}
+
+.player2Score {
+    left: 605px;
+}
+
+/* --- SIDE TABLES --- */
+.sideTable {
     position: absolute;
-    font-size: 25px;
-}
-
-.mainTablePlayer2 {
-    position: absolute;
-    font-size: 25px;
-}
-
-.mainTableScore {
-
-}
-
-#mainTableScore1 {
-
-}
-
-#mainTableScore2 {
-
+    width: 640px;
+    height: 360px;
 }
 
 /* --- TOP SIDE TABLE DIV --- */
-.topSideTable {
-    position: absolute;
+#topSideTable {
     top: 0px;
     left: 1280px;
-    background-color: coral;
-    width: 640px;
-    height: 360px;
+    background-color: green;
 }
 /* --- TOP SIDE TABLE DIV --- */
 
 
 /* --- MIDDLE SIDE TABLE DIV --- */
-.middleSideTable {
-    position: absolute;
+#middleSideTable {
     top: 360px;
     left: 1280px;
     background-color: lightgreen;
-    width: 640px;
-    height: 360px;
 }
 /* --- MIDDLE SIDE TABLE DIV --- */
 
 
 /* --- BOTTOM SIDE TABLE DIV --- */
-.bottomSideTable {
-    position: absolute;
+#bottomSideTable {
     top: 720px;
     left: 1280px;
     background-color: lightskyblue;
-    width: 640px;
-    height: 360px;
 }
 /* --- BOTTOM SIDE TABLE DIV --- */
 

@@ -22,7 +22,7 @@
 
 
     <!-- MATCH 1 SCOREBOARD -->
-    <div class="score" id="score1">score1
+    <div class="score" id="score1">
         <div>
             <label class="matchLabel" id="match1Label"></label>
         </div>
@@ -42,7 +42,7 @@
 
     
     <!-- MATCH 2 SCOREBOARD -->
-    <div class="score" id="score2">score2
+    <div class="score" id="score2">
         <div>
             <label class="matchLabel" id="match2Label"></label>
         </div>
@@ -60,37 +60,71 @@
         </div>
     </div>
 
-
-    <!-- MAIN TABLE -->
-    <div class="mainTable">mainTable
+    <!-- MAIN  TABLE LABEL-->
+    <div>
+        <label class="tableLabel" id="mainTableLabel">Table 1</label>
+    </div>
+    <!-- MAIN  TABLE SCOREBOARD-->
+    <div class="tableScoreboard" id="mainTableScoreboard">
         <div>
-            <label class="tableLabel" id="mainTableLabel">Table 1</label>
+            <img src="public/images/shetland_flag.png" class="playerFlag player1Flag" id="mainTablePlayer1Flag">
         </div>
         <div>
-            <img src="public/images/orkney_flag.png" class="mainTableFlag" id="mainTablePlayer1Flag">
+            <label class="playerName player1Name" id="mainTablePlayer1"></label>
+        </div>
+        <div>
+            <label class="playerScore player1Score" id="mainTableScore1"></label>
+        </div>
+        <div>
+            <img src="public/images/orkney_flag.png" class="playerFlag player2Flag" id="mainTablePlayer2Flag">
+        </div>
+        <div>
+            <label class="playerName player2Name" id="mainTablePlayer2"></label>
+        </div>
+        <div>
+            <label class="playerScore player2Score" id="mainTableScore2"></label>
         </div>
     </div>
 
-
     <!-- TOP SIDE TABLE -->
-    <div class="sideTable" id="topSideTable">topSideTable
-
+    <div class="sideTable" id="topSideTable">
+        <!-- TOP SIDE TABLE SCOREBOARD-->
+        <div class="tableScoreboard" id="topSideTableScoreboard">
+            <div>
+                <img src="public/images/shetland_flag.png" class="playerFlag player1Flag" id="topSideTablePlayer1Flag">
+            </div>
+            <div>
+                <label class="playerName player1Name" id="topSideTablePlayer1"></label>
+            </div>
+            <div>
+                <label class="playerScore player1Score" id="topSideTableScore1"></label>
+            </div>
+            <div>
+                <img src="public/images/orkney_flag.png" class="playerFlag player2Flag" id="topSideTablePlayer2Flag">
+            </div>
+            <div>
+                <label class="playerName player2Name" id="topSideTablePlayer2"></label>
+            </div>
+            <div>
+                <label class="playerScore player2Score" id="topSideTableScore2"></label>
+            </div>
+        </div>
     </div>
 
 
     <!-- MIDDLE SIDE TABLE -->
-    <div class="sideTable" id="middleSideTable">middleSideTable
+    <div class="sideTable" id="middleSideTable">
 
     </div>
 
 
     <!-- BOTTOM SIDE TABLE -->
-    <div class="sideTable" id="bottomSideTable">bottomSideTableScore
+    <div class="sideTable" id="bottomSideTable">
 
     </div>
 
     <!-- SPONSORS SECTION/TICKER -->
-    <div class="ticker">ticker</div>
+    <div class="ticker"></div>
 
 
     <script>
@@ -130,15 +164,15 @@
         table3 = tables[2]
         table4 = tables[3]
 
-        var mainTableLabel = document.getElementById('mainTableLabel')
-        mainTableLabel.innerHTML = table1.player1Name
-        var t1p1ScoreLabel = document.getElementById('t1p1ScoreLabel')
-        t1p1ScoreLabel.innerHTML = table1.player1Score
-        var t1p2Name1Label = document.getElementById('t1p2NameLabel')
-        t1p2Name1Label.innerHTML = table1.player2Name
-        var t1p2ScoreLabel = document.getElementById('t1p2ScoreLabel')
-        t1p2ScoreLabel.innerHTML = table1.player2Score
-
+        var mainTablePlayer1 = document.getElementById('mainTablePlayer1')
+        mainTablePlayer1.innerHTML = table1.player1Name
+        var mainTableScore1 = document.getElementById('mainTableScore1')
+        mainTableScore1.innerHTML = table1.player1Score
+        var mainTablePlayer2 = document.getElementById('mainTablePlayer2')
+        mainTablePlayer2.innerHTML = table1.player2Name
+        var mainTableScore1 = document.getElementById('mainTableScore2')
+        mainTableScore1.innerHTML = table1.player2Score
+/*
         var t2p1Name1Label = document.getElementById('t2p1NameLabel')
         t2p1Name1Label.innerHTML = table2.player1Name
         var t2p1ScoreLabel = document.getElementById('t2p1ScoreLabel')
@@ -164,29 +198,44 @@
         var t4p2Name1Label = document.getElementById('t4p2NameLabel')
         t4p2Name1Label.innerHTML = table4.player2Name
         var t4p2ScoreLabel = document.getElementById('t4p2ScoreLabel')
-        t4p2ScoreLabel.innerHTML = table4.player2Score
+        t4p2ScoreLabel.innerHTML = table4.player2Score*/
         })
 
         socket.on('tableChange', table => {
             console.log('Table changed...')
-            var tableNumber = table.tableNumber
+            var mainTable = table.tableNumber
+            switch (mainTable) {
+                case 1:
+                    div = "mainTable";
+                    break;
+                case 2:
+                    div = "topSideTable";
+                    break;
+                case 3:
+                    div = "middleSideTable";
+                    break;
+                case 4:
+                    div = "bottomSideTable";
+                    break;
+            }
+
             if (table.player1Name) {
-                var elementId = "t" + tableNumber + "p1NameLabel"
+                var elementId = div + "Player1"
                 var element = document.getElementById(elementId)
                 element.innerHTML = table.player1Name
             }
             if (table.player1Score) {
-                var elementId = "t" + tableNumber + "p1ScoreLabel"
+                var elementId = div + "Score1"
                 var element = document.getElementById(elementId)
                 element.innerHTML = table.player1Score
             }
             if (table.player2Name) {
-                var elementId = "t" + tableNumber + "p2NameLabel"
+                var elementId = div + "Player2"
                 var element = document.getElementById(elementId)
                 element.innerHTML = table.player2Name
             }
             if (table.player2Score) {
-                var elementId = "t" + tableNumber + "p2ScoreLabel"
+                var elementId = div + "Score2"
                 var element = document.getElementById(elementId)
                 element.innerHTML = table.player2Score
             }
