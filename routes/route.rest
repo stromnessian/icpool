@@ -3,31 +3,16 @@ GET http://localhost:3000/players
 ###
 
 
-GET http://localhost:3000/scores
+GET http://localhost:3000/scores/
+###
+
+DELETE http://localhost:3000/tables/5e4eea51ce133b0e043776ab
 
 ###
 
-POST http://localhost:3000/scores
+PATCH http://localhost:3000/scores/5e50549413f5a033bc41080d
 Content-Type: application/json
 
 {
-    "number": 1,
-    "name": "Men's A",
-    "team1": "Shetland",
-    "score1": 3,
-    "team2": "Orkney",
-    "score2": 9
-}
-
-###
-
-DELETE http://localhost:3000/scores/5e5007038106cd18882287d3
-
-###
-
-PATCH http://localhost:3000/tables/5e47e26af51127351cc19197
-Content-Type: application/json
-
-{
-    "player2Name": "Fast Eddie"
+    "number": 2
 }

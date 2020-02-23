@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Table 1</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Inter County Pool Scoreboard</title>
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
     <script src="public/scripts/script.js" defer></script>
     <link rel="stylesheet" href="public/styles/style.css">
@@ -12,86 +13,169 @@
     <script src="/socket.io/socket.io.js"></script>
 </head>
 <body>
-    <!-- COMPETITION TITLE -->
-    <div class="competition">
-        <div>
-            <label class="competitionLabel" type="text">2020 INTER COUNTY POOL SHETLAND v ORKNEY</label>
-        </div>
-    </div>
-
-
-
-    <!-- MATCH 1 SCOREBOARD -->
-    <div class="score" id="score1">score1
+    <div class="match">
         <div>
             <label class="matchLabel" id="match1Label"></label>
         </div>
         <div>
-            <img src="public/images/shetland_flag.png" class="mainFlag" id="mainShetlandFlag1">
+            <img src="public/images/shetland_flag.png" class="mainFlag" id="mainShetlandFlag">
         </div>
         <div>
-            <label class="matchScoreLabel" id="match1Score1Label" type="number"></label>
+            <label class="teamScore" id="match1Score1Label" type="number"></label>
         </div>
         <div>
-            <img src="public/images/orkney_flag.png" class="mainFlag" id="mainOrkneyFlag1">
+            <img src="public/images/orkney_flag.png" class="mainFlag" id="mainOrkneyFlag">
         </div>
         <div>    
-            <label class="matchScoreLabel" id="match1Score2Label" type="number"></label>
+            <label class="teamScore" id="match1Score2Label" type="number"></label>
         </div>
     </div>
 
-    
-    <!-- MATCH 2 SCOREBOARD -->
-    <div class="score" id="score2">score2
+    <div class="table" id="table1"></div>
+        <!-- TABLE 1 LABEL -->
+        <div>
+            <label class="tableLabel" id="table1Label">TABLE 1</label>
+        </div>
+        <!-- TABLE 1 PLAYER 1 -->
+        <div class="scoreLine" id="t1p1ScoreLine">
+            <div class="flagContainer">
+                <img src="public/images/shetland_flag.png" class="playerFlag" id="t1p1Flag">
+            </div>
+            <div>
+                <label class="playerNameLabel" id="t1p1NameLabel"></label>
+            </div>
+            <div>
+                <label class="playerScoreLabel" id="t1p1ScoreLabel"></label>
+            </div>
+        </div>
+
+        <!-- TABLE 1 PLAYER 2 -->
+        <div class="scoreLine" id="t1p2ScoreLine">
+            <div class="flagContainer">
+                <img src="public/images/orkney_flag.png" class="playerFlag" id="t1p2Flag">
+            </div>
+            <div>
+                <label class="playerNameLabel" id="t1p2NameLabel"></label>
+            </div>
+            <div>
+                <label class="playerScoreLabel" id="t1p2ScoreLabel"></label>
+            </div>
+        </div>
+
+        <div class="table" id="table2"></div>
+        <!-- TABLE 2 LABEL -->
+        <div>
+            <label class="tableLabel" id="table1Label">TABLE 2</label>
+        </div>
+        <!-- TABLE 2 PLAYER 1 -->
+        <div class="scoreLine" id="t1p2ScoreLine">
+            <div class="flagContainer">
+                <img src="public/images/shetland_flag.png" class="playerFlag" id="t2p1Flag">
+            </div>
+            <div>
+                <label class="playerNameLabel" id="t2p1NameLabel"></label>
+            </div>
+            <div>
+                <label class="playerScoreLabel" id="t2p1ScoreLabel"></label>
+            </div>
+        </div>
+
+        <!-- TABLE 2 PLAYER 2 -->
+        <div class="scoreLine" id="t2p2ScoreLine">
+            <div class="flagContainer">
+                <img src="public/images/orkney_flag.png" class="playerFlag" id="t2p2Flag">
+            </div>
+            <div>
+                <label class="playerNameLabel" id="t2p2NameLabel"></label>
+            </div>
+            <div>
+                <label class="playerScoreLabel" id="t2p2ScoreLabel"></label>
+            </div>
+        </div>
+
+    <div class="table" id="table3"></div>     
+        <!-- TABLE 3 LABEL -->
+        <div>
+            <label class="tableLabel" id="table3Label">TABLE 3</label>
+        </div>
+
+        <!-- TABLE 3 PLAYER 1 -->
+        <div class="scoreLine" id="t3p1ScoreLine">
+            <div class="flagContainer">
+                <img src="public/images/shetland_flag.png" class="playerFlag" id="t3p1Flag">
+            </div>
+            <div>
+                <label class="playerNameLabel" id="t3p1NameLabel"></label>
+            </div>
+            <div>
+                <label class="playerScoreLabel" id="t3p1ScoreLabel"></label>
+            </div>
+        </div>
+
+        <!-- TABLE 3 PLAYER 2 -->
+        <div class="scoreLine" id="t3p2ScoreLine">
+            <div class="flagContainer">
+                <img src="public/images/orkney_flag.png" class="playerFlag" id="t3p1Flag">
+            </div>
+            <div>
+                <label class="playerNameLabel" id="t3p2NameLabel"></label>
+            </div>
+            <div>
+                <label class="playerScoreLabel" id="t3p2ScoreLabel"></label>
+            </div>
+        </div>
+    </div>
+
+    <div class="table" id="table4"></div>    
+        <!-- TABLE 4 LABEL -->
+        <div>
+            <label class="tableLabel" id="table4Label">TABLE 4</label>
+        </div>
+
+        <!-- TABLE 4 PLAYER 1 -->
+        <div class="scoreLine" id="t4p1ScoreLine">
+            <div class="flagContainer">
+                <img src="public/images/shetland_flag.png" class="playerFlag" id="t4p1Flag">
+            </div>
+            <div>
+                <label class="playerNameLabel" id="t4p1NameLabel"></label>
+            </div>
+            <div>
+                <label class="playerScoreLabel" id="t4p1ScoreLabel"></label>
+            </div>
+        </div>
+
+        <!-- TABLE 4 PLAYER 2 -->
+        <div class="scoreLine" id="t4p2ScoreLine">
+            <div class="flagContainer">
+                <img src="public/images/orkney_flag.png" class="playerFlag" id="t4p1Flag">
+            </div>
+            <div>
+                <label class="playerNameLabel" id="t4p2NameLabel"></label>
+            </div>
+            <div>
+                <label class="playerScoreLabel" id="t4p2ScoreLabel"></label>
+            </div>
+        </div>
+    </div>
+    <div></div>
+    <div class="match">
         <div>
             <label class="matchLabel" id="match2Label"></label>
         </div>
         <div>
-            <img src="public/images/shetland_flag.png" class="mainFlag" id="mainShetlandFlag2">
+            <img src="public/images/shetland_flag.png" class="mainFlag" id="mainShetlandFlag">
         </div>
         <div>
-            <label class="matchScoreLabel" id="match2Score1Label" type="number"></label>
+            <label class="teamScore" id="match2Score1Label" type="number"></label>
         </div>
         <div>
-            <img src="public/images/orkney_flag.png" class="mainFlag" id="mainOrkneyFlag2">
+            <img src="public/images/orkney_flag.png" class="mainFlag" id="mainOrkneyFlag">
         </div>
         <div>    
-            <label class="matchScoreLabel" id="match2Score2Label" type="number"></label>
+            <label class="teamScore" id="match2Score2Label" type="number"></label>
         </div>
     </div>
-
-
-    <!-- MAIN TABLE -->
-    <div class="mainTable">mainTable
-        <div>
-            <label class="tableLabel" id="mainTableLabel">Table 1</label>
-        </div>
-        <div>
-            <img src="public/images/orkney_flag.png" class="mainTableFlag" id="mainTablePlayer1Flag">
-        </div>
-    </div>
-
-
-    <!-- TOP SIDE TABLE -->
-    <div class="sideTable" id="topSideTable">topSideTable
-
-    </div>
-
-
-    <!-- MIDDLE SIDE TABLE -->
-    <div class="sideTable" id="middleSideTable">middleSideTable
-
-    </div>
-
-
-    <!-- BOTTOM SIDE TABLE -->
-    <div class="sideTable" id="bottomSideTable">bottomSideTableScore
-
-    </div>
-
-    <!-- SPONSORS SECTION/TICKER -->
-    <div class="ticker">ticker</div>
-
 
     <script>
         var socket = io.connect();
@@ -130,8 +214,8 @@
         table3 = tables[2]
         table4 = tables[3]
 
-        var mainTableLabel = document.getElementById('mainTableLabel')
-        mainTableLabel.innerHTML = table1.player1Name
+        var t1p1Name1Label = document.getElementById('t1p1NameLabel')
+        t1p1Name1Label.innerHTML = table1.player1Name
         var t1p1ScoreLabel = document.getElementById('t1p1ScoreLabel')
         t1p1ScoreLabel.innerHTML = table1.player1Score
         var t1p2Name1Label = document.getElementById('t1p2NameLabel')
