@@ -59,8 +59,13 @@ io.on('connection', async function(socket) {
     })
 
     socket.on('updateScore', score => {
-        console.log('Incoming table...')
+        console.log('Incoming score...')
         socket.broadcast.emit('scoreChange', score)
+    })
+    
+    socket.on('updateMatch', match => {
+        console.log('Incoming match...')
+        socket.broadcast.emit('matchChange', match)
     })
 
     socket.on('disconnect', function(){

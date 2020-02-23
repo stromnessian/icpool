@@ -57,6 +57,18 @@ body {
     font-weight: bolder;
     text-shadow: 1px 1px 2px lightcoral, 0 0 5px gold;
 }
+
+.matchSelect {
+    position: absolute;
+    top: 5px;
+    left: 425px;
+    color: black;
+    font-size: 48px;
+    color: black;
+    font-weight: bolder;
+    text-shadow: 1px 1px 2px lightcoral, 0 0 5px gold;
+}
+
 /* ^^^ MATCH NAME ^^^ */
 
 
@@ -81,7 +93,7 @@ body {
 
 
 /* --- MATCH SCORES --- */
-.matchScoreLabel {
+.matchScoreLabel, .matchScoreInput {
     position: absolute;
     font-size: 48px;
     color: black;
@@ -89,27 +101,75 @@ body {
     text-shadow: 1px 1px 2px lightcoral, 0 0 5px gold;
 }
 
-#match1Score1Label, #match2Score1Label {
+.matchScoreInput {
+    width: 80px;
+}
+
+#match1Score1Label, #match2Score1Label, #match1Score1Input, #match2Score1Input {
     top: 5px;
     left: 320px;
 }
 
-#match1Score2Label, #match2Score2Label {
+#match1Score2Label, #match2Score2Label, #match1Score2Input, #match2Score2Input {
     top: 5px;
     left: 920px;
 }
+
 /* ^^^ MATCH SCORES ^^^ */
 
 
 .tableLabel {
     position: absolute;
+    font-size: 24px;
     text-transform: uppercase;
     font-weight: bold;
     border-radius: 10px;
     padding-left: 5px;
     padding-right: 5px;
+    background-color: wheat;
 }
 
+/* --- FOR UPDATE PAGE --- */
+#table1Label {
+    top: 280px;
+    left: 10 px;
+}
+
+#table1Scoreboard {
+    top: 280px;
+    left: 160px;
+}
+
+#table2Label {
+    top: 440px;
+    left: 10 px;
+}
+
+#table2Scoreboard {
+    top: 440px;
+    left: 160px;
+}
+
+#table3Label {
+    top: 600px;
+    left: 10 px;
+}
+
+#table3Scoreboard {
+    top: 600px;
+    left: 160px;
+}
+
+#table4Label {
+    top: 760px;
+    left: 10 px;
+}
+
+#table4Scoreboard {
+    top: 760px;
+    left: 160px;
+}
+/* ^^^ FOR UPDATE PAGE ^^^ */
 
 /* --- TABLE SCOREBOARD DIV --- */
 .tableScoreboard {
@@ -122,11 +182,13 @@ body {
 /* --- MAIN TABLE LABEL --- */
 
 #mainTableLabel {
-    position: absolute;
     top: 200px;
     left: 20px;
-    font-size: 25px;
-    background-color: wheat;
+}
+
+#mainTableScoreboard {
+    top: 800px;
+    left: 320px;
 }
 
 .playerFlag {
@@ -142,16 +204,33 @@ body {
     font-weight: bold;
 }
 
+.playerSelect {
+    position: absolute;
+    margin-left: 0px;
+    top: 4px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
 .playerScore {
     position: absolute;
     top: 0px;
-    font-size: 25px;
+    font-size: 24px;
     font-weight: bold;
     background-color: gold;
     border-radius: 5px;
     padding-bottom: 2px;
     padding-left: 2px;
     padding-right: 2px;
+}
+
+.playerScoreInput {
+    position: absolute;
+    top: 4px;
+    margin-left: -20px;
+    height: 30px;
+    width: 40px;
+    font-size: 20px;
 }
 
 .player1Flag {
@@ -179,37 +258,43 @@ body {
 }
 
 /* --- SIDE TABLES --- */
-.sideTable {
-    position: absolute;
-    width: 640px;
-    height: 360px;
+
+/* --- TOP SIDE TABLE --- */
+#topSideTableLabel {
+    top: 5px;
+    left: 1285px;
+}
+#topSideTableScoreboard {
+    top: 300px;
+    left: 1285px;
+}
+/* ^^^ TOP SIDE TABLE ^^^ */
+
+
+/* --- MIDDLE SIDE TABLE --- */
+#middleSideTableLabel {
+    top: 370px;
+    left: 1290px;
 }
 
-/* --- TOP SIDE TABLE DIV --- */
-#topSideTable {
-    top: 0px;
-    left: 1280px;
-    background-color: green;
+#middleSideTableScoreboard {
+    top: 660px;
+    left: 1285px;
 }
-/* --- TOP SIDE TABLE DIV --- */
+/* ^^^ MIDDLE SIDE TABLE ^^^ */
 
 
-/* --- MIDDLE SIDE TABLE DIV --- */
-#middleSideTable {
-    top: 360px;
-    left: 1280px;
-    background-color: lightgreen;
+/* --- BOTTOM SIDE TABLE --- */
+#bottomSideTableLabel {
+    top: 730px;
+    left: 1290px;
 }
-/* --- MIDDLE SIDE TABLE DIV --- */
 
-
-/* --- BOTTOM SIDE TABLE DIV --- */
-#bottomSideTable {
-    top: 720px;
-    left: 1280px;
-    background-color: lightskyblue;
+#bottomSideTableScoreboard {
+    top: 1020px;
+    left: 1285px;
 }
-/* --- BOTTOM SIDE TABLE DIV --- */
+/* ^^^ BOTTOM SIDE TABLE ^^^ */
 
 
 /* --- TICKER DIV --- */

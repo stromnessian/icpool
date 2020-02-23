@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table 3</title>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+    <script src="scripts/script.js" defer></script>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+    <!-- COMPETITION TITLE -->
+    <div class="competition">
+        <div>
+            <label class="competitionLabel" type="text">2020 INTER COUNTY POOL SHETLAND v ORKNEY</label>
+        </div>
+    </div>
+
+
+
+    <!-- MATCH 1 SCOREBOARD -->
+    <div class="score" id="score1">
+        <div>
+            <label class="matchLabel" id="match1Label"></label>
+        </div>
+        <div>
+            <img src="images/shetland_flag.png" class="mainFlag" id="mainShetlandFlag1">
+        </div>
+        <div>
+            <label class="matchScoreLabel" id="match1Score1Label" type="number"></label>
+        </div>
+        <div>
+            <img src="images/orkney_flag.png" class="mainFlag" id="mainOrkneyFlag1">
+        </div>
+        <div>    
+            <label class="matchScoreLabel" id="match1Score2Label" type="number"></label>
+        </div>
+    </div>
+
+    
+    <!-- MATCH 2 SCOREBOARD -->
+    <div class="score" id="score2">
+        <div>
+            <label class="matchLabel" id="match2Label"></label>
+        </div>
+        <div>
+            <img src="images/shetland_flag.png" class="mainFlag" id="mainShetlandFlag2">
+        </div>
+        <div>
+            <label class="matchScoreLabel" id="match2Score1Label" type="number"></label>
+        </div>
+        <div>
+            <img src="images/orkney_flag.png" class="mainFlag" id="mainOrkneyFlag2">
+        </div>
+        <div>    
+            <label class="matchScoreLabel" id="match2Score2Label" type="number"></label>
+        </div>
+    </div>
+
+    <!-- MAIN  TABLE LABEL-->
+    <div>
+        <label class="tableLabel" id="mainTableLabel">Table 3</label>
+    </div>
+    <!-- MAIN  TABLE SCOREBOARD-->
+    <div class="tableScoreboard" id="mainTableScoreboard">
+        <div>
+            <img src="images/shetland_flag.png" class="playerFlag player1Flag" id="mainTablePlayer1Flag">
+        </div>
+        <div>
+            <label class="playerName player1Name" id="mainTablePlayer1"></label>
+        </div>
+        <div>
+            <label class="playerScore player1Score" id="mainTableScore1"></label>
+        </div>
+        <div>
+            <img src="images/orkney_flag.png" class="playerFlag player2Flag" id="mainTablePlayer2Flag">
+        </div>
+        <div>
+            <label class="playerName player2Name" id="mainTablePlayer2"></label>
+        </div>
+        <div>
+            <label class="playerScore player2Score" id="mainTableScore2"></label>
+        </div>
+    </div>
+
+    <!-- TOP SIDE TABLE LABEL-->
+    <div>
+        <label class="tableLabel" id="topSideTableLabel">Table 1</label>
+    </div>
+    <!-- TOP SIDE TABLE SCOREBOARD-->
+    <div class="tableScoreboard" id="topSideTableScoreboard">
+        <div>
+            <img src="images/shetland_flag.png" class="playerFlag player1Flag" id="topSideTablePlayer1Flag">
+        </div>
+        <div>
+            <label class="playerName player1Name" id="topSideTablePlayer1"></label>
+        </div>
+        <div>
+            <label class="playerScore player1Score" id="topSideTableScore1"></label>
+        </div>
+        <div>
+            <img src="images/orkney_flag.png" class="playerFlag player2Flag" id="topSideTablePlayer2Flag">
+        </div>
+        <div>
+            <label class="playerName player2Name" id="topSideTablePlayer2"></label>
+        </div>
+        <div>
+            <label class="playerScore player2Score" id="topSideTableScore2"></label>
+        </div>
+    </div>
+
+
+    <!-- MIDDLE SIDE TABLE LABEL-->
+    <div>
+        <label class="tableLabel" id="middleSideTableLabel">Table 2</label>
+    </div>
+    <!-- MIDDLE SIDE TABLE SCOREBOARD-->
+    <div class="tableScoreboard" id="middleSideTableScoreboard">
+        <div>
+            <img src="images/shetland_flag.png" class="playerFlag player1Flag" id="middleSideTablePlayer1Flag">
+        </div>
+        <div>
+            <label class="playerName player1Name" id="middleSideTablePlayer1"></label>
+        </div>
+        <div>
+            <label class="playerScore player1Score" id="middleSideTableScore1"></label>
+        </div>
+        <div>
+            <img src="images/orkney_flag.png" class="playerFlag player2Flag" id="middleSideTablePlayer2Flag">
+        </div>
+        <div>
+            <label class="playerName player2Name" id="middleSideTablePlayer2"></label>
+        </div>
+        <div>
+            <label class="playerScore player2Score" id="middleSideTableScore2"></label>
+        </div>
+    </div>
+
+
+    <!-- BOTTOM SIDE TABLE LABEL-->
+    <div>
+        <label class="tableLabel" id="bottomSideTableLabel">Table 4</label>
+    </div>
+    <!-- BOTTOM SIDE TABLE SCOREBOARD-->
+    <div class="tableScoreboard" id="bottomSideTableScoreboard">
+        <div>
+            <img src="images/shetland_flag.png" class="playerFlag player1Flag" id="bottomSideTablePlayer1Flag">
+        </div>
+        <div>
+            <label class="playerName player1Name" id="bottomSideTablePlayer1"></label>
+        </div>
+        <div>
+            <label class="playerScore player1Score" id="bottomSideTableScore1"></label>
+        </div>
+        <div>
+            <img src="images/orkney_flag.png" class="playerFlag player2Flag" id="bottomSideTablePlayer2Flag">
+        </div>
+        <div>
+            <label class="playerName player2Name" id="bottomSideTablePlayer2"></label>
+        </div>
+        <div>
+            <label class="playerScore player2Score" id="bottomSideTableScore2"></label>
+        </div>
+    </div>
+
+    <!-- SPONSORS SECTION/TICKER -->
+    <div class="ticker"></div>
+
+
+    <script>
+        var socket = io.connect();
+        if (socket !== undefined) {
+                console.log('Connected to socket...');
+        } else {
+            console.log('socket is undefined')
+        }
+
+        socket.on('scores', scores => {
+            console.log('Getting scores...')
+            console.log(scores)
+            score1 = scores[0]
+            score2 = scores[1]
+
+            var match1Label = document.getElementById('match1Label')
+            match1Label.innerHTML = score1.name
+            var match1Score1Label = document.getElementById('match1Score1Label')
+            match1Score1Label.innerHTML = score1.score1
+            var match1Score1Label = document.getElementById('match1Score2Label')
+            match1Score2Label.innerHTML = score1.score2
+
+            var match2Label = document.getElementById('match2Label')
+            match2Label.innerHTML = score2.name
+            var match2Score1Label = document.getElementById('match2Score1Label')
+            match2Score1Label.innerHTML = score2.score1
+            var match2Score2Label = document.getElementById('match2Score2Label')
+            match2Score2Label.innerHTML = score2.score2
+        })
+
+        socket.on('tables', tables => {
+        console.log('Getting tables...')
+        console.log(tables)
+        table1 = tables[0]
+        table2 = tables[1]
+        table3 = tables[2]
+        table4 = tables[3]
+
+        var mainTablePlayer1 = document.getElementById('mainTablePlayer1')
+        mainTablePlayer1.innerHTML = table3.player1Name
+        var mainTableScore1 = document.getElementById('mainTableScore1')
+        mainTableScore1.innerHTML = table3.player1Score
+        var mainTablePlayer2 = document.getElementById('mainTablePlayer2')
+        mainTablePlayer2.innerHTML = table3.player2Name
+        var mainTableScore1 = document.getElementById('mainTableScore2')
+        mainTableScore1.innerHTML = table3.player2Score
+
+        var topSideTablePlayer1 = document.getElementById('topSideTablePlayer1')
+        topSideTablePlayer1.innerHTML = table1.player1Name
+        var topSideTableScore1 = document.getElementById('topSideTableScore1')
+        topSideTableScore1.innerHTML = table1.player1Score
+        var topSideTablePlayer2 = document.getElementById('topSideTablePlayer2')
+        topSideTablePlayer2.innerHTML = table1.player2Name
+        var topSideTableScore2 = document.getElementById('topSideTableScore2')
+        topSideTableScore2.innerHTML = table1.player2Score
+
+        var middleSideTablePlayer1 = document.getElementById('middleSideTablePlayer1')
+        middleSideTablePlayer1.innerHTML = table2.player1Name
+        var middleSideTableScore1 = document.getElementById('middleSideTableScore1')
+        middleSideTableScore1.innerHTML = table2.player1Score
+        var middleSideTablePlayer2 = document.getElementById('middleSideTablePlayer2')
+        middleSideTablePlayer2.innerHTML = table2.player2Name
+        var middleSideTableScore2 = document.getElementById('middleSideTableScore2')
+        middleSideTableScore2.innerHTML = table2.player2Score
+
+        var bottomSideTablePlayer1 = document.getElementById('bottomSideTablePlayer1')
+        bottomSideTablePlayer1.innerHTML = table4.player1Name
+        var bottomSideTableScore1 = document.getElementById('bottomSideTableScore1')
+        bottomSideTableScore1.innerHTML = table4.player1Score
+        var bottomSideTablePlayer2 = document.getElementById('bottomSideTablePlayer2')
+        bottomSideTablePlayer2.innerHTML = table4.player2Name
+        var bottomSideTableScore2 = document.getElementById('bottomSideTableScore2')
+        bottomSideTableScore2.innerHTML = table4.player2Score
+        })
+
+        socket.on('tableChange', table => {
+            console.log('Table changed...')
+            var mainTable = table.tableNumber
+            switch (mainTable) {
+                case 3:
+                    div = "mainTable";
+                    break;
+                case 1:
+                    div = "topSideTable";
+                    break;
+                case 2:
+                    div = "middleSideTable";
+                    break;
+                case 4:
+                    div = "bottomSideTable";
+                    break;
+            }
+
+            if (table.player1Name) {
+                var elementId = div + "Player1"
+                var element = document.getElementById(elementId)
+                element.innerHTML = table.player1Name
+            }
+            if (table.player1Score) {
+                var elementId = div + "Score1"
+                var element = document.getElementById(elementId)
+                element.innerHTML = table.player1Score
+            }
+            if (table.player2Name) {
+                var elementId = div + "Player2"
+                var element = document.getElementById(elementId)
+                element.innerHTML = table.player2Name
+            }
+            if (table.player2Score) {
+                var elementId = div + "Score2"
+                var element = document.getElementById(elementId)
+                element.innerHTML = table.player2Score
+            }
+        })
+
+        socket.on('scoreChange', score => {
+            console.log('Score changed...')
+            var scoreNumber = score.number
+            if (score.score1) {
+                var elementId = "match" + scoreNumber + "Score1Label"
+                var element = document.getElementById(elementId)
+                element.innerHTML = score.score1
+            }
+            if (score.score2) {
+                var elementId = "match" + scoreNumber + "Score2Label"
+                var element = document.getElementById(elementId)
+                element.innerHTML = score.score2
+            }
+        })
+
+        socket.on('matchChange', match => {
+            var matchNumber = match.number
+            var elementId = "match" + matchNumber + "Label"
+            var element = document.getElementById(elementId)
+            element.innerHTML = match.name
+        })
+
+    </script>
+</body>
+</html>

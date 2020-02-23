@@ -17,6 +17,8 @@ function loadValues () {
         loadMatches(id)
     }
 
+
+
     //find player dropdowns and populate from players db
     var playerDropdowns = document.getElementsByClassName("playerSelect")
     console.log(playerDropdowns)
@@ -139,7 +141,7 @@ function updateTable(calledFrom) {
             break
     }
     socket.emit('updateTable', data)
-    fetch(`http://localhost:3000/tables/${id}`, {
+    fetch(`tables/${id}`, {
         headers: { "Content-Type": "application/json; charset=utf-8" },
         method: 'PATCH',
         body: JSON.stringify(data)
@@ -151,16 +153,16 @@ function updateScore(calledFrom) {
     var scoreNumber = parseInt(calledFrom.substring(5,6))
     var value = document.getElementById(calledFrom).value
     switch (calledFrom) {
-        case "match1Score1":
+        case "match1Score1Input":
             var data = {"number": 1, "score1": value}
             break
-        case "match1Score2":
+        case "match1Score2Input":
             var data = {"number": 1, "score2": value}
             break
-        case "match2Score1":
+        case "match2Score1Input":
             var data = {"number": 2, "score1": value}
             break
-        case "match2Score2":
+        case "match2Score2Input":
             var data = {"number": 2, "score2": value}
             break
     }
@@ -173,7 +175,7 @@ function updateScore(calledFrom) {
             break
     }
     socket.emit('updateScore', data)
-    fetch(`http://localhost:3000/scores/${id}`, {
+    fetch(`scores/${id}`, {
         headers: { "Content-Type": "application/json; charset=utf-8" },
         method: 'PATCH',
         body: JSON.stringify(data)
@@ -182,25 +184,26 @@ function updateScore(calledFrom) {
 
 function updateMatch(calledFrom) {
     console.log(calledFrom)
-    var number = calledFrom.substring(5,6)
+    var number = parseInt(calledFrom.substring(5,6))
     var value = document.getElementById(calledFrom).value
     switch (calledFrom) {
         case "match1Name":
-            var data = {"name": value}
+            var data = {"number": 1, "name": value}
             break
         case "match2Name":
-            var data = {"name": value}
+            var data = {"number": 2, "name": value}
             break
     }
     switch (number) {
-        case "1":
+        case 1:
             var id = '5e50548f13f5a033bc41080c'
             break
-        case "2":
+        case 2:
             var id = '5e50549413f5a033bc41080d'
             break
     }
-    fetch(`http://localhost:3000/scores/${id}`, {
+    socket.emit('updateMatch', data)
+    fetch(`scores/${id}`, {
         headers: { "Content-Type": "application/json; charset=utf-8" },
         method: 'PATCH',
         body: JSON.stringify(data)
