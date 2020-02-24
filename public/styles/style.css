@@ -2,6 +2,10 @@ body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+#indexContainer {
+    margin: 0 auto;
+}
+
 
 /* --- COMPETITION TITLE DIV --- */
 .competition {
@@ -14,9 +18,9 @@ body {
 .competitionLabel {
     position: absolute;
     top: 5px;
-    left: 60px;
     width: 1280px;
     font-size: 48px;
+    text-align: center;
     color: black;
     font-weight: bolder;
     text-shadow: 1px 1px 2px lightcoral, 0 0 5px gold;
@@ -34,12 +38,10 @@ body {
 
 #score1 {
     top: 90px;
-    left: 0px;
 }
 
 #score2 {
-    top: 900px;
-    left: 0px;
+    top: 540px;
 }
 /* ^^^ MATCH SCORE DIV ^^^ */
 
@@ -113,11 +115,13 @@ body {
 }
 
 #match1Score1Label, #match2Score1Label, #match1Score1Input, #match2Score1Input {
+    position: absolute;
     top: 5px;
     left: 420px;
 }
 
 #match1Score2Label, #match2Score2Label, #match1Score2Input, #match2Score2Input {
+    position: absolute;
     top: 5px;
     left: 970px;
 }
@@ -151,46 +155,51 @@ body {
     background-color: darkred;
 }
 
+.tableScoreboard {
+    position: absolute;
+    left: 50%;
+    margin-left: -300px;
+}
+
 #table1Label {
-    top: 280px;
-    left: 10 px;
+    top: 200px;
 }
 
 #table1Scoreboard {
-    top: 280px;
-    left: 360px;
+    top: 200px;
 }
 
 #table2Label {
-    top: 440px;
-    left: 10 px;
+    top: 280px;
 }
 
 #table2Scoreboard {
-    top: 440px;
-    left: 360px;
+    top: 280px;
 }
 
 #table3Label {
-    top: 600px;
-    left: 10 px;
+    top: 360px;
 }
 
 #table3Scoreboard {
-    top: 600px;
-    left: 360px;
+    top: 360px;
 }
 
 #table4Label {
-    top: 760px;
-    left: 10 px;
+    top: 440px;
 }
 
 #table4Scoreboard {
-    top: 760px;
-    left: 360px;
+    top: 440px;
 }
 /* ^^^ FOR UPDATE PAGE ^^^ */
+
+#srTrioBg {
+    position: absolute;
+    top: -200px;
+    width: 1280px;
+    opacity: 0.2;
+}
 
 /* --- TABLE SCOREBOARD DIV --- */
 .tableScoreboard {
@@ -321,8 +330,7 @@ body {
 /* --- TICKER DIV --- */
 #sponsor {
     position: absolute;
-    top: 990px;
-    left: 0px;
+    top: 630px;
     background-color: wheat;
     width: 1280px;
     height: 90px;

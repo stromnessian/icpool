@@ -21,7 +21,6 @@
         </div>
     </div>
 
-
     <!-- MATCH 1 SCOREBOARD-->
     <div class="score" id="score1">
         <div>
@@ -38,127 +37,125 @@
         </div>
             <input class="matchScoreInput" id="match1Score2Input" type="number" value=0 min=0 onchange=updateScore(this.id)>
         </div>
-                <!-- LOGOUT -->
-                <form>
-                    <button id="logoutButton" formaction="logout">Log out</button>
-                  </form>
+    </div>
+    
+    <!-- LOGOUT -->
+    <form>
+        <button id="logoutButton" formaction="logout">Log out</button>
+    </form>
         
-                <!-- TABLE 1 LABEL -->
-                <div>
-                    <label class="tableLabel" id="table1Label">TABLE 1</label>
-                </div>
+    <!-- TABLE 1 LABEL -->
+    <div>
+        <label class="tableLabel" id="table1Label">TABLE 1</label>
+    </div>
+
+    <!-- TABLE 1 SCOREBOARD -->
+    <div class="tableScoreboard" id="table1Scoreboard">
+        <div>
+            <img src="public/images/shetland_flag.png" class="playerFlag player1Flag" id="t1p1Flag">
+        </div>
+        <div>
+            <select class="playerSelect player1Name" id="t1p1Name" onchange=updateTable(this.id)></select>
+        </div>
+        <div>
+            <input class="playerScoreInput player1Score" id="t1p1Score" type="number" value=0 min=0 max=5 onchange=updateTable(this.id)>
+        </div>
+        <div>
+            <img src="public/images/orkney_flag.png" class="playerFlag player2Flag" id="t1p1Flag">
+        </div>
+        <div>
+            <select class="playerSelect player2Name" id="t1p2Name" onchange=updateTable(this.id)></select>
+        </div>
+        <div>
+            <input class="playerScoreInput player2Score" id="t1p2Score" type="number" value=0 min=0 max=5 onchange=updateTable(this.id)>
+        </div>
+    </div>
+
+
+    <!-- TABLE 2 LABEL -->
+    <div>
+        <label class="tableLabel" id="table2Label">TABLE 2</label>
+    </div>
+    <!-- TABLE 2 SCOREBOARD -->
+    <div class="tableScoreboard" id="table2Scoreboard">
+        <div>
+            <img src="public/images/shetland_flag.png" class="playerFlag player1Flag" id="t2p1Flag">
+        </div>
+        <div>
+            <select class="playerSelect player1Name" id="t2p1Name" onchange=updateTable(this.id)></select>
+        </div>
+        <div>
+            <input class="playerScoreInput player1Score" id="t2p1Score" type="number" value=0 min=0 max=5 onchange=updateTable(this.id)>
+        </div>
+        <div>
+            <img src="public/images/orkney_flag.png" class="playerFlag player2Flag" id="t2p1Flag">
+        </div>
+        <div>
+            <select class="playerSelect player2Name" id="t2p2Name" onchange=updateTable(this.id)></select>
+        </div>
+        <div>
+            <input class="playerScoreInput player2Score" id="t2p2Score" type="number" value=0 min=0 max=5 onchange=updateTable(this.id)>
+        </div>
     </div>
 
 
 
 
-        <!-- TABLE 1 SCOREBOARD -->
-        <div class="tableScoreboard" id="table1Scoreboard">
-            <div>
-                <img src="public/images/shetland_flag.png" class="playerFlag player1Flag" id="t1p1Flag">
-            </div>
-            <div>
-                <select class="playerSelect player1Name" id="t1p1Name" onchange=updateTable(this.id)></select>
-            </div>
-            <div>
-                <input class="playerScoreInput player1Score" id="t1p1Score" type="number" value=0 min=0 max=5 onchange=updateTable(this.id)>
-            </div>
-            <div>
-                <img src="public/images/orkney_flag.png" class="playerFlag player2Flag" id="t1p1Flag">
-            </div>
-            <div>
-                <select class="playerSelect player2Name" id="t1p2Name" onchange=updateTable(this.id)></select>
-            </div>
-            <div>
-                <input class="playerScoreInput player2Score" id="t1p2Score" type="number" value=0 min=0 max=5 onchange=updateTable(this.id)>
-            </div>
-        </div>
-
-
-        <!-- TABLE 2 LABEL -->
+    <!-- TABLE 3 LABEL -->
+    <div>
+        <label class="tableLabel" id="table3Label">TABLE 3</label>
+    </div>
+    <!-- TABLE 3 SCOREBOARD -->
+    <div class="tableScoreboard" id="table3Scoreboard">
         <div>
-            <label class="tableLabel" id="table2Label">TABLE 2</label>
+            <img src="public/images/shetland_flag.png" class="playerFlag player1Flag" id="t3p1Flag">
         </div>
-        <!-- TABLE 2 SCOREBOARD -->
-        <div class="tableScoreboard" id="table2Scoreboard">
-            <div>
-                <img src="public/images/shetland_flag.png" class="playerFlag player1Flag" id="t2p1Flag">
-            </div>
-            <div>
-                <select class="playerSelect player1Name" id="t2p1Name" onchange=updateTable(this.id)></select>
-            </div>
-            <div>
-                <input class="playerScoreInput player1Score" id="t2p1Score" type="number" value=0 min=0 max=5 onchange=updateTable(this.id)>
-            </div>
-            <div>
-                <img src="public/images/orkney_flag.png" class="playerFlag player2Flag" id="t2p1Flag">
-            </div>
-            <div>
-                <select class="playerSelect player2Name" id="t2p2Name" onchange=updateTable(this.id)></select>
-            </div>
-            <div>
-                <input class="playerScoreInput player2Score" id="t2p2Score" type="number" value=0 min=0 max=5 onchange=updateTable(this.id)>
-            </div>
-        </div>
-
-
-
-
-        <!-- TABLE 3 LABEL -->
         <div>
-            <label class="tableLabel" id="table3Label">TABLE 3</label>
+            <select class="playerSelect player1Name" id="t3p1Name" onchange=updateTable(this.id)></select>
         </div>
-        <!-- TABLE 3 SCOREBOARD -->
-        <div class="tableScoreboard" id="table3Scoreboard">
-            <div>
-                <img src="public/images/shetland_flag.png" class="playerFlag player1Flag" id="t3p1Flag">
-            </div>
-            <div>
-                <select class="playerSelect player1Name" id="t3p1Name" onchange=updateTable(this.id)></select>
-            </div>
-            <div>
-                <input class="playerScoreInput player1Score" id="t3p1Score" type="number" value=0 min=0 max=5 onchange=updateTable(this.id)>
-            </div>
-            <div>
-                <img src="public/images/orkney_flag.png" class="playerFlag player2Flag" id="t3p1Flag">
-            </div>
-            <div>
-                <select class="playerSelect player2Name" id="t3p2Name" onchange=updateTable(this.id)></select>
-            </div>
-            <div>
-                <input class="playerScoreInput player2Score" id="t3p2Score" type="number" value=0 min=0 max=5 onchange=updateTable(this.id)>
-            </div>
-        </div>
-
-
-
-
-
-        <!-- TABLE 4 LABEL -->
         <div>
-            <label class="tableLabel" id="table4Label">TABLE 4</label>
+            <input class="playerScoreInput player1Score" id="t3p1Score" type="number" value=0 min=0 max=5 onchange=updateTable(this.id)>
         </div>
-        <!-- TABLE 4 SCOREBOARD -->
-        <div class="tableScoreboard" id="table4Scoreboard">
-            <div>
-                <img src="public/images/shetland_flag.png" class="playerFlag player1Flag" id="t4p1Flag">
-            </div>
-            <div>
-                <select class="playerSelect player1Name" id="t4p1Name" onchange=updateTable(this.id)></select>
-            </div>
-            <div>
-                <input class="playerScoreInput player1Score" id="t4p1Score" type="number" value=0 min=0 max=5 onchange=updateTable(this.id)>
-            </div>
-            <div>
-                <img src="public/images/orkney_flag.png" class="playerFlag player2Flag" id="t4p1Flag">
-            </div>
-            <div>
-                <select class="playerSelect player2Name" id="t4p2Name" onchange=updateTable(this.id)></select>
-            </div>
-            <div>
-                <input class="playerScoreInput player2Score" id="t4p2Score" type="number" value=0 min=0 max=5 onchange=updateTable(this.id)>
-            </div>
+        <div>
+            <img src="public/images/orkney_flag.png" class="playerFlag player2Flag" id="t3p1Flag">
         </div>
+        <div>
+            <select class="playerSelect player2Name" id="t3p2Name" onchange=updateTable(this.id)></select>
+        </div>
+        <div>
+            <input class="playerScoreInput player2Score" id="t3p2Score" type="number" value=0 min=0 max=5 onchange=updateTable(this.id)>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- TABLE 4 LABEL -->
+    <div>
+        <label class="tableLabel" id="table4Label">TABLE 4</label>
+    </div>
+    <!-- TABLE 4 SCOREBOARD -->
+    <div class="tableScoreboard" id="table4Scoreboard">
+        <div>
+            <img src="public/images/shetland_flag.png" class="playerFlag player1Flag" id="t4p1Flag">
+        </div>
+        <div>
+            <select class="playerSelect player1Name" id="t4p1Name" onchange=updateTable(this.id)></select>
+        </div>
+        <div>
+            <input class="playerScoreInput player1Score" id="t4p1Score" type="number" value=0 min=0 max=5 onchange=updateTable(this.id)>
+        </div>
+        <div>
+            <img src="public/images/orkney_flag.png" class="playerFlag player2Flag" id="t4p1Flag">
+        </div>
+        <div>
+            <select class="playerSelect player2Name" id="t4p2Name" onchange=updateTable(this.id)></select>
+        </div>
+        <div>
+            <input class="playerScoreInput player2Score" id="t4p2Score" type="number" value=0 min=0 max=5 onchange=updateTable(this.id)>
+        </div>
+    </div>
 
 
 
