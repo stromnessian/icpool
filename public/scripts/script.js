@@ -27,14 +27,6 @@ function loadValues () {
         var id = playerDropdowns[i].id
         loadPlayers(id)
     }
-
-    //reset player scores
-    var playerScores = document.getElementsByClassName("playerScore")
-    for(var i=0; i<playerScores.length; i++)
-    {
-        var score = playerScores[i]
-        score.value = 0
-    }
  
 }
 
