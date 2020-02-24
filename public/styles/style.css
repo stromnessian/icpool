@@ -137,6 +137,20 @@ body {
 }
 
 /* --- FOR UPDATE PAGE --- */
+#logoutButton {
+    position: absolute;
+    top: 114px;
+    left: 1140px;
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    color: white;
+    background-color: darkred;
+}
+
 #table1Label {
     top: 280px;
     left: 10 px;
