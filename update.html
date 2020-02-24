@@ -189,19 +189,21 @@
             score1 = scores[0]
             score2 = scores[1]
 
-            var match1 = document.getElementById('match1Name')
-            match1.value = score1.name
-            var match1Score1Input = document.getElementById('match1Score1Input')
-            match1Score1Input.value = score1.score1
-            var match1Score2Input = document.getElementById('match1Score2Input')
-            match1Score2Input.value = score1.score2
+            setTimeout(() => {
+                var match1 = document.getElementById('match1Name')
+                match1.value = score1.name
+                var match1Score1Input = document.getElementById('match1Score1Input')
+                match1Score1Input.value = score1.score1
+                var match1Score2Input = document.getElementById('match1Score2Input')
+                match1Score2Input.value = score1.score2
 
-            var match2 = document.getElementById('match2Name')
-            match2.value = score2.name
-            var match2Score1Input = document.getElementById('match2Score1Input')
-            match2Score1Input.value = score2.score1
-            var match2Score2Input = document.getElementById('match2Score2Input')
-            match2Score2Input.value = score2.score2
+                var match2 = document.getElementById('match2Name')
+                match2.value = score2.name
+                var match2Score1Input = document.getElementById('match2Score1Input')
+                match2Score1Input.value = score2.score1
+                var match2Score2Input = document.getElementById('match2Score2Input')
+                match2Score2Input.value = score2.score2
+            }, 2000)
         })
 
         socket.on('tables', tables => {
@@ -248,7 +250,7 @@
             t4p2Name.value = table4.player2Name
             var t4p2Score = document.getElementById('t4p2Score')
             t4p2Score.value = table4.player2Score
-        },2000)
+        }, 2000)
 
         })
 </script>
