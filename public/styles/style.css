@@ -2,7 +2,8 @@ body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-#indexContainer {
+#indexContainer, #updateContainer {
+    width: 1280px;
     margin: 0 auto;
 }
 
@@ -63,10 +64,13 @@ body {
 
 .matchSelect {
     position: absolute;
-    top: 5px;
+    top: 20px;
     left: 500px;
+    height: 50px;
+    width: 350px;
+    text-align: center;
     color: black;
-    font-size: 48px;
+    font-size: 40px;
     color: black;
     font-weight: bolder;
     text-shadow: 1px 1px 2px lightcoral, 0 0 5px gold;
@@ -107,22 +111,35 @@ body {
 .matchScoreInput {
     position: absolute;
     width: 80px;
+    height: 50px;
     margin-left: -20px;
-    font-size: 48px;
+    font-size: 40px;
     color: black;
     font-weight: bolder;
     text-shadow: 1px 1px 2px lightcoral, 0 0 5px gold;
 }
 
-#match1Score1Label, #match2Score1Label, #match1Score1Input, #match2Score1Input {
+#match1Score1Label, #match2Score1Label {
     position: absolute;
     top: 5px;
     left: 420px;
 }
 
-#match1Score2Label, #match2Score2Label, #match1Score2Input, #match2Score2Input {
+#match1Score1Input, #match2Score1Input {
+    position: absolute;
+    top: 20px;
+    left: 420px;
+}
+
+#match1Score2Label, #match2Score2Label {
     position: absolute;
     top: 5px;
+    left: 970px;
+}
+
+#match1Score2Input, #match2Score2Input {
+    position: absolute;
+    top: 20px;
     left: 970px;
 }
 
@@ -143,8 +160,8 @@ body {
 /* --- FOR UPDATE PAGE --- */
 #logoutButton {
     position: absolute;
-    top: 114px;
-    left: 1140px;
+    top: 24px;
+    right: 40px;
     font-size: 24px;
     text-transform: uppercase;
     font-weight: bold;
@@ -327,8 +344,8 @@ body {
 /* ^^^ BOTTOM SIDE TABLE ^^^ */
 
 
-/* --- TICKER DIV --- */
-#sponsor {
+/* --- SPONSOR DIV --- */
+.sponsorLower {
     position: absolute;
     top: 630px;
     background-color: wheat;
@@ -341,4 +358,12 @@ body {
     bottom: 0px;
     width: 1280px;
 }
-/* --- TICKER DIV --- */
+
+#sponsorImageLeft {
+    position: absolute;
+    top: 566px;
+    left: 27px;
+    width: 270px;
+}
+
+/* --- SPONSOR DIV --- */

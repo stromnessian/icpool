@@ -13,13 +13,15 @@
     <script src="/socket.io/socket.io.js"></script>
 </head>
 <body onload=loadValues()>
-
+<div id="updateContainer">
     <!-- COMPETITION TITLE -->
     <div class="competition">
         <div>
             <label class="competitionLabel" type="text">2020 INTER COUNTY POOL SHETLAND v ORKNEY</label>
         </div>
     </div>
+
+    <img id="srTrioBg" src="public/images/sr_trio.jpg">
 
     <!-- MATCH 1 SCOREBOARD-->
     <div class="score" id="score1">
@@ -35,14 +37,15 @@
         <div>
             <img src="public/images/orkney_flag.png" class="mainFlag" id="mainOrkneyFlag1">
         </div>
+        <div>
             <input class="matchScoreInput" id="match1Score2Input" type="number" value=0 min=0 onchange=updateScore(this.id)>
         </div>
+        <!-- LOGOUT -->
+        <form>
+            <button id="logoutButton" formaction="logout">Log out</button>
+        </form>
     </div>
     
-    <!-- LOGOUT -->
-    <form>
-        <button id="logoutButton" formaction="logout">Log out</button>
-    </form>
         
     <!-- TABLE 1 LABEL -->
     <div>
@@ -157,7 +160,12 @@
         </div>
     </div>
 
-
+    <!-- SPONSORS SECTION -->
+    <div class="sponsorLower">
+        <div>
+            <img src="public/images/shetland_reel.png" id="sponsorImage">
+        </div>
+    </div>
 
     <!-- MATCH 2 SCOREBOARD-->
     <div class="score" id="score2">
@@ -173,10 +181,15 @@
         <div>
             <img src="public/images/orkney_flag.png" class="mainFlag" id="mainOrkneyFlag2">
         </div>
+        <div>
             <input class="matchScoreInput" id="match2Score2Input" type="number" value=0 min=0 onchange=updateScore(this.id)>
         </div>
     </div>
 
+    <!-- SPONSORS SECTION -->
+    <img src="public/images/shetland_reel_left.png" id="sponsorImageLeft">
+
+</div>
 
     <!-- socket.io -->
     <script>
