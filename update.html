@@ -53,7 +53,7 @@
     </div>
 
     <!-- TABLE 1 SCOREBOARD -->
-    <div class="tableScoreboard" id="table1Scoreboard">
+    <div class="updateTableScoreboard" id="table1Scoreboard">
         <div>
             <img src="public/images/shetland_flag.png" class="playerFlag player1Flag" id="t1p1Flag">
         </div>
@@ -80,7 +80,7 @@
         <label class="tableLabel" id="table2Label">TABLE 2</label>
     </div>
     <!-- TABLE 2 SCOREBOARD -->
-    <div class="tableScoreboard" id="table2Scoreboard">
+    <div class="updateTableScoreboard" id="table2Scoreboard">
         <div>
             <img src="public/images/shetland_flag.png" class="playerFlag player1Flag" id="t2p1Flag">
         </div>
@@ -109,7 +109,7 @@
         <label class="tableLabel" id="table3Label">TABLE 3</label>
     </div>
     <!-- TABLE 3 SCOREBOARD -->
-    <div class="tableScoreboard" id="table3Scoreboard">
+    <div class="updateTableScoreboard" id="table3Scoreboard">
         <div>
             <img src="public/images/shetland_flag.png" class="playerFlag player1Flag" id="t3p1Flag">
         </div>
@@ -139,7 +139,7 @@
         <label class="tableLabel" id="table4Label">TABLE 4</label>
     </div>
     <!-- TABLE 4 SCOREBOARD -->
-    <div class="tableScoreboard" id="table4Scoreboard">
+    <div class="updateTableScoreboard" id="table4Scoreboard">
         <div>
             <img src="public/images/shetland_flag.png" class="playerFlag player1Flag" id="t4p1Flag">
         </div>
@@ -160,15 +160,8 @@
         </div>
     </div>
 
-    <!-- SPONSORS SECTION -->
-    <div class="sponsorLower">
-        <div>
-            <img src="public/images/shetland_reel.png" id="sponsorImage">
-        </div>
-    </div>
-
     <!-- MATCH 2 SCOREBOARD-->
-    <div class="score" id="score2">
+    <div class="score" id="updateScore2">
         <div>
             <select class="matchSelect" id="match2Name" onchange=updateMatch(this.id)></select>
         </div>       
@@ -187,8 +180,10 @@
     </div>
 
     <!-- SPONSORS SECTION -->
-    <img src="public/images/shetland_reel_left.png" id="sponsorImageLeft">
-
+    <div class="updateSponsorLower">
+        <img src="public/images/shetland_reel_left.png" id="sponsorImageLeft">
+        <img src="public/images/shetland_reel_right.png" id="sponsorImageRight">
+    </div>
 </div>
 
     <!-- socket.io -->
