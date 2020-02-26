@@ -3,27 +3,27 @@ const mongoose = require('mongoose')
 const scoreSchema = new mongoose.Schema({
     number: {
         type: Number,
-        required: false
+        required: true
     },
     name: {
         type: String,
-        required: false
+        required: true
     },
     team1: {
         type: String,
-        required: false,
+        required: true,
     },
     score1: {
         type: Number,
-        required: false,
+        required: true,
     },
     team2: {
         type: String,
-        required: false,
+        required: true,
     },
     score2: {
         type: Number,
-        required: false,
+        required: true,
     }
 })
 

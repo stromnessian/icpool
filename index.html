@@ -286,15 +286,23 @@
             console.log('Score changed...')
             var scoreNumber = score.number
             if (score.score1) {
-                var elementId = "match" + scoreNumber + "Score1"
+                var elementId = "match" + scoreNumber + "Score1Label"
                 var element = document.getElementById(elementId)
                 element.innerHTML = score.score1
             }
             if (score.score2) {
-                var elementId = "match" + scoreNumber + "Score2"
+                var elementId = "match" + scoreNumber + "Score2Label"
                 var element = document.getElementById(elementId)
                 element.innerHTML = score.score2
             }
+        })
+
+        socket.on('matchChange', match => {
+            console.log('Match changed...')
+            var matchNumber = match.number
+                var elementId = "match" + matchNumber + "Name"
+                var element = document.getElementById(elementId)
+                element.innerHTML = match.name
         })
 
     </script>

@@ -176,6 +176,10 @@ body {
     background-color: darkred;
 }
 
+#logoutButton:hover {
+    background-color: lightcoral;
+}
+
 .indexTableScoreboard, .updateTableScoreboard {
     position: absolute;
     left: 50%;
@@ -265,7 +269,7 @@ body {
 
 .playerScore {
     position: absolute;
-    top: 0px;
+    top: 1px;
     font-size: 24px;
     font-weight: bold;
     background-color: gold;
