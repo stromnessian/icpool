@@ -23,7 +23,7 @@ Content-Type: application/json
 DELETE http://localhost:3000/tables/5e4eea51ce133b0e043776ab
 
 ###
-GET http://localhost:3000/tables
+GET http://localhost:3000/tables/6214bcc27dfe49aa54f2bfe9
 ###
 PATCH http://localhost:3000/tables/6214bcc27dfe49aa54f2bfea
 Content-Type: application/json
