@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Table 1</title>
+    <title>Live Stream</title>
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
     <script src="scripts/script.js" defer></script>
     <link rel="stylesheet" href="styles/style.css">
@@ -22,21 +22,21 @@
     <img class="background" src="../public/images/hp-dragon-legend-bg.jpg">
 
     <!-- MATCH 1 SCOREBOARD -->
-    <div class="score" id="score1">
+    <div class="score" id="streamScore1">
         <div>
-            <label class="matchLabel" id="match1Label"></label>
+            <label class="matchLabel" id="streamMatch1Label"></label>
         </div>
         <div>
-            <img src="images/shetland_flag.png" class="mainFlag" id="mainShetlandFlag1">
+            <img src="images/shetland_flag.png" class="mainFlag" id="streamMainShetlandFlag1">
         </div>
         <div>
-            <label class="matchScoreLabel" id="match1Score1Label" type="number"></label>
+            <label class="matchScoreLabel" id="streamMatch1Score1Label" type="number"></label>
         </div>
         <div>
-            <img src="images/orkney_flag.png" class="mainFlag" id="mainOrkneyFlag1">
+            <img src="images/orkney_flag.png" class="mainFlag" id="streamMainOrkneyFlag1">
         </div>
         <div>    
-            <label class="matchScoreLabel" id="match1Score2Label" type="number"></label>
+            <label class="matchScoreLabel" id="streamMatch1Score2Label" type="number"></label>
         </div>
     </div>
 
@@ -47,16 +47,16 @@
             <label class="matchLabel" id="streamMatch2Label"></label>
         </div>
         <div>
-            <img src="images/shetland_flag.png" class="mainFlag" id="mainShetlandFlag2">
+            <img src="images/shetland_flag.png" class="mainFlag" id="streamMainShetlandFlag2">
         </div>
         <div>
-            <label class="matchScoreLabel" id="match2Score1Label" type="number"></label>
+            <label class="matchScoreLabel" id="streamMatch2Score1Label" type="number"></label>
         </div>
         <div>
-            <img src="images/orkney_flag.png" class="mainFlag" id="mainOrkneyFlag2">
+            <img src="images/orkney_flag.png" class="mainFlag" id="streamMainOrkneyFlag2">
         </div>
         <div>    
-            <label class="matchScoreLabel" id="match2Score2Label" type="number"></label>
+            <label class="matchScoreLabel" id="streamMatch2Score2Label" type="number"></label>
         </div>
     </div>
 
@@ -111,18 +111,18 @@
             score1 = scores[0]
             score2 = scores[1]
 
-            var match1Label = document.getElementById('match1Label')
+            var match1Label = document.getElementById('streamMatch1Label')
             match1Label.innerHTML = score1.name
-            var match1Score1Label = document.getElementById('match1Score1Label')
+            var match1Score1Label = document.getElementById('streamMatch1Score1Label')
             match1Score1Label.innerHTML = score1.score1
-            var match1Score1Label = document.getElementById('match1Score2Label')
+            var match1Score2Label = document.getElementById('streamMatch1Score2Label')
             match1Score2Label.innerHTML = score1.score2
 
-            var match2Label = document.getElementById('match2Label')
+            var match2Label = document.getElementById('streamMatch2Label')
             match2Label.innerHTML = score2.name
-            var match2Score1Label = document.getElementById('match2Score1Label')
+            var match2Score1Label = document.getElementById('streamMatch2Score1Label')
             match2Score1Label.innerHTML = score2.score1
-            var match2Score2Label = document.getElementById('match2Score2Label')
+            var match2Score2Label = document.getElementById('streamMatch2Score2Label')
             match2Score2Label.innerHTML = score2.score2
         })
 
@@ -143,33 +143,8 @@
         var mainTableScore1 = document.getElementById('mainTableScore2')
         mainTableScore1.innerHTML = table1.player2Score
 
-        var topSideTablePlayer1 = document.getElementById('topSideTablePlayer1')
-        topSideTablePlayer1.innerHTML = table2.player1Name
-        var topSideTableScore1 = document.getElementById('topSideTableScore1')
-        topSideTableScore1.innerHTML = table2.player1Score
-        var topSideTablePlayer2 = document.getElementById('topSideTablePlayer2')
-        topSideTablePlayer2.innerHTML = table2.player2Name
-        var topSideTableScore2 = document.getElementById('topSideTableScore2')
-        topSideTableScore2.innerHTML = table2.player2Score
-
-        var middleSideTablePlayer1 = document.getElementById('middleSideTablePlayer1')
-        middleSideTablePlayer1.innerHTML = table3.player1Name
-        var middleSideTableScore1 = document.getElementById('middleSideTableScore1')
-        middleSideTableScore1.innerHTML = table3.player1Score
-        var middleSideTablePlayer2 = document.getElementById('middleSideTablePlayer2')
-        middleSideTablePlayer2.innerHTML = table3.player2Name
-        var middleSideTableScore2 = document.getElementById('middleSideTableScore2')
-        middleSideTableScore2.innerHTML = table3.player2Score
-
-        var bottomSideTablePlayer1 = document.getElementById('bottomSideTablePlayer1')
-        bottomSideTablePlayer1.innerHTML = table4.player1Name
-        var bottomSideTableScore1 = document.getElementById('bottomSideTableScore1')
-        bottomSideTableScore1.innerHTML = table4.player1Score
-        var bottomSideTablePlayer2 = document.getElementById('bottomSideTablePlayer2')
-        bottomSideTablePlayer2.innerHTML = table4.player2Name
-        var bottomSideTableScore2 = document.getElementById('bottomSideTableScore2')
-        bottomSideTableScore2.innerHTML = table4.player2Score
         })
+        
 
         socket.on('tableChange', table => {
             console.log('Table changed...')
@@ -188,6 +163,7 @@
                     div = "bottomSideTable";
                     break;
             }
+            
 
             if (table.player1Name) {
                 var elementId = div + "Player1"
@@ -215,12 +191,12 @@
             console.log('Score changed...')
             var scoreNumber = score.number
             if (score.score1) {
-                var elementId = "match" + scoreNumber + "Score1Label"
+                var elementId = "streamMatch" + scoreNumber + "Score1Label"
                 var element = document.getElementById(elementId)
                 element.innerHTML = score.score1
             }
             if (score.score2) {
-                var elementId = "match" + scoreNumber + "Score2Label"
+                var elementId = "streamMatch" + scoreNumber + "Score2Label"
                 var element = document.getElementById(elementId)
                 element.innerHTML = score.score2
             }
@@ -228,7 +204,7 @@
 
         socket.on('matchChange', match => {
             var matchNumber = match.number
-            var elementId = "match" + matchNumber + "Label"
+            var elementId = "streamMatch" + matchNumber + "Label"
             var element = document.getElementById(elementId)
             element.innerHTML = match.name
         })
