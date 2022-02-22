@@ -132,7 +132,7 @@ body {
 #match1Score1Input, #match2Score1Input {
     position: absolute;
     top: 20px;
-    left: 420px;
+    left: 360px;
 }
 
 #match1Score2Label, #match2Score2Label {
@@ -144,7 +144,7 @@ body {
 #match1Score2Input, #match2Score2Input {
     position: absolute;
     top: 20px;
-    left: 970px;
+    left: 930px;
 }
 
 /* ^^^ MATCH SCORES ^^^ */
@@ -236,7 +236,7 @@ body {
 
 /* ^^^ FOR UPDATE PAGE ^^^ */
 
-#background {
+.background {
     position: absolute;
     top: -300px;
     width: 1280px;
