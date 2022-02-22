@@ -104,6 +104,7 @@ function updateTable(calledFrom) {
     console.log(calledFrom)
     var tableNumber = parseInt(calledFrom.substring(1,2))
     var value = document.getElementById(calledFrom).value
+    console.log(value)
     switch (calledFrom.substring(2,5)) {
         case "p1N":
             var data = {"tableNumber": tableNumber, "player1Name": value}
@@ -139,6 +140,7 @@ function updateTable(calledFrom) {
             break
     }
     socket.emit('updateTable', data)
+    console.log(data)
     fetch(`tables/${id}`, {
         headers: { "Content-Type": "application/json; charset=utf-8" },
         method: 'PATCH',

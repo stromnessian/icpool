@@ -1,23 +1,34 @@
 GET http://localhost:3000/players
 
-###
-GET http://localhost:3000/tables
 
 ###
 GET http://localhost:3000/scores/
+###
+DELETE http://localhost:3000/scores/6214b2d57dfe49aa54f2bfd6
+
+
+
 
 ###
 GET http://localhost:3000/matches/
-
-
-DELETE http://localhost:3000/tables/5e4eea51ce133b0e043776ab
-
 ###
-
-PATCH http://localhost:3000/tables/6214bcc27dfe49aa54f2bfe5
+POST http://localhost:3000/matches/
 Content-Type: application/json
 
 {
-    "player1Name": "John Stun",
-    "player2Name": "Ally Pally"
+    "name": "Women's B"
+}
+
+###
+DELETE http://localhost:3000/tables/5e4eea51ce133b0e043776ab
+
+###
+GET http://localhost:3000/tables
+###
+PATCH http://localhost:3000/tables/6214bcc27dfe49aa54f2bfea
+Content-Type: application/json
+
+{
+    "player1Name": "NOT IN USE",
+    "player2Name": "NOT IN USE"
 }

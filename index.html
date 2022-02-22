@@ -177,7 +177,7 @@
     </div>
 
 
-            <!-- TABLE 6 LABEL -->
+    <!-- TABLE 6 LABEL -->
     <div>
         <label class="tableLabel" id="table6Label">TABLE 6</label>
     </div>
@@ -202,8 +202,6 @@
             <label class="playerScore player2Score" id="t6p2Score"></label>
         </div>
     </div>
-
-
 
     <!-- MATCH 2 SCOREBOARD-->
     <div class="score" id="indexScore2">
@@ -266,6 +264,8 @@
         table2 = tables[1]
         table3 = tables[2]
         table4 = tables[3]
+        table5 = tables[4]
+        table6 = tables[5]
 
         var t1p1Name1 = document.getElementById('t1p1Name')
         t1p1Name1.innerHTML = table1.player1Name
@@ -302,6 +302,24 @@
         t4p2Name1.innerHTML = table4.player2Name
         var t4p2Score = document.getElementById('t4p2Score')
         t4p2Score.innerHTML = table4.player2Score
+
+        var t5p1Name1 = document.getElementById('t5p1Name')
+        t5p1Name1.innerHTML = table5.player1Name
+        var t5p1Score = document.getElementById('t5p1Score')
+        t5p1Score.innerHTML = table5.player1Score
+        var t5p2Name1 = document.getElementById('t5p2Name')
+        t5p2Name1.innerHTML = table5.player2Name
+        var t5p2Score = document.getElementById('t5p2Score')
+        t5p2Score.innerHTML = table5.player2Score
+
+        var t6p1Name1 = document.getElementById('t6p1Name')
+        t6p1Name1.innerHTML = table6.player1Name
+        var t6p1Score = document.getElementById('t6p1Score')
+        t6p1Score.innerHTML = table6.player1Score
+        var t6p2Name1 = document.getElementById('t6p2Name')
+        t6p2Name1.innerHTML = table6.player2Name
+        var t6p2Score = document.getElementById('t6p2Score')
+        t6p2Score.innerHTML = table6.player2Score
         })
 
         socket.on('tableChange', table => {
