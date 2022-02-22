@@ -45,8 +45,14 @@ body {
     top: 90px;
 }
 
+#streamScore1 {
+    top: 60px;
+    height: 50px;
+}
+
 #streamScore2 {
-    top: 600px;
+    top: 610px;
+    height: 50px;
 }
 
 #indexScore2, #updateScore2 {
@@ -84,8 +90,14 @@ body {
     text-shadow: 1px 1px 2px lightcoral, 0 0 5px gold;
 }
 
-#streamMatch2Label {
+#streamMatch1Label {
+    top: -5px;
+    font-size: 36px;
+}
 
+#streamMatch2Label {
+    top: -5px;
+    font-size: 36px;
 }
 
 /* ^^^ MATCH NAME ^^^ */
@@ -263,12 +275,12 @@ body {
 /* --- MAIN TABLE LABEL --- */
 
 #mainTableLabel {
-    top: 200px;
+    top: 140px;
     left: 20px;
 }
 
 #mainTableScoreboard {
-    top: 500px;
+    top: 540px;
     left: 320px;
 }
 
@@ -379,14 +391,6 @@ body {
 
 
 /* --- SPONSOR DIV --- */
-.sponsorStrapLower {
-    position: absolute;
-    top: 990px;
-    background-color: wheat;
-    width: 1280px;
-    height: 90px;
-}
-
 .indexSponsorLower, .updateSponsorLower {
     position: absolute;
     top: 630px;
@@ -395,9 +399,24 @@ body {
     height: 90px;
 }
 
+.streamSponsorLower {
+    position: absolute;
+    top: 660px;
+    background-color: wheat;
+    width: 1280px;
+    height: 60px;
+}
+
 #indexSponsorStrapLower {
     position: absolute;
     height: 120px;
+    bottom: 5px;
+    left: 5px;
+}
+
+#streamSponsorStrapLower {
+    position: absolute;
+    height: 80px;
     bottom: 5px;
     left: 5px;
 }
@@ -417,9 +436,9 @@ body {
 
 #streamSponsorImageRight {
     position: absolute;
-    bottom: 0px;
+    bottom: 5px;
     right: 0px;
-    height: 160px;
+    height: 120px;
 }
 
 /* --- SPONSOR DIV --- */
