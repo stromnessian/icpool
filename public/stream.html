@@ -15,11 +15,11 @@
     <!-- COMPETITION TITLE -->
     <div class="competition">
         <div>
-            <label class="competitionLabel" type="text">2022 INTER COUNTY POOL ORKNEY v SHETLAND</label>
+            <label class="competitionLabel" id="streamCompetitionLabel" type="text">2022 INTER COUNTY POOL ORKNEY v SHETLAND</label>
         </div>
     </div>
 
-
+    <img class="background" src="../public/images/hp-dragon-legend-bg.jpg">
 
     <!-- MATCH 1 SCOREBOARD -->
     <div class="score" id="score1">
@@ -42,9 +42,9 @@
 
     
     <!-- MATCH 2 SCOREBOARD -->
-    <div class="score" id="score2">
+    <div class="score" id="streamScore2">
         <div>
-            <label class="matchLabel" id="match2Label"></label>
+            <label class="matchLabel" id="streamMatch2Label"></label>
         </div>
         <div>
             <img src="images/shetland_flag.png" class="mainFlag" id="mainShetlandFlag2">
@@ -87,10 +87,15 @@
     </div>
 
     <!-- SPONSORS SECTION -->
-    <div class="sponsorLower">
-        <img src="images/Highland-Park-Dragon-Legend-1.png" id="sponsorImageLeft">
+    <div class="indexSponsorLower">
+        <div>
+            <img src="../public/images/hpStrap.png" id="indexSponsorStrapLower">
+        </div>
+        <div>
+            <img src="../public/images/Highland-Park-Dragon-Legend-1.png" id="streamSponsorImageRight">
+        </div>
     </div>
-
+    <!-- END OF SPONSORS SECTION -->
 
     <script>
         var socket = io.connect();

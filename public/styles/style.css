@@ -26,6 +26,10 @@ body {
     font-weight: bolder;
     text-shadow: 1px 1px 2px lightcoral, 0 0 5px gold;
 }
+
+#streamCompetitionLabel {
+    font-size: 36px;
+}
 /* ^^^ COMPETITION TITLE DIV^^^ */
 
 
@@ -41,8 +45,8 @@ body {
     top: 90px;
 }
 
-#score2 {
-    top: 900px;
+#streamScore2 {
+    top: 600px;
 }
 
 #indexScore2, #updateScore2 {
@@ -78,6 +82,10 @@ body {
     color: black;
     font-weight: bolder;
     text-shadow: 1px 1px 2px lightcoral, 0 0 5px gold;
+}
+
+#streamMatch2Label {
+
 }
 
 /* ^^^ MATCH NAME ^^^ */
@@ -260,7 +268,7 @@ body {
 }
 
 #mainTableScoreboard {
-    top: 800px;
+    top: 500px;
     left: 320px;
 }
 
@@ -405,6 +413,13 @@ body {
     bottom: 0px;
     right: 0px;
     height: 200px;
+}
+
+#streamSponsorImageRight {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    height: 160px;
 }
 
 /* --- SPONSOR DIV --- */
