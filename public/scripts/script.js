@@ -120,16 +120,22 @@ function updateTable(calledFrom) {
     }
     switch (tableNumber) {
         case 1:
-            var id = '5e4eb179ce133b0e043776a6'
+            var id = '6214bcc27dfe49aa54f2bfe5'
             break
         case 2:
-            var id = '5e4ef566ce133b0e043776ae'
+            var id = '6214bcc27dfe49aa54f2bfe6'
             break
         case 3:
-            var id = '5e4ef570ce133b0e043776af'
+            var id = '6214bcc27dfe49aa54f2bfe7'
             break
         case 4:
-            var id = '5e4ef575ce133b0e043776b0'
+            var id = '6214bcc27dfe49aa54f2bfe8'
+            break
+        case 5:
+            var id = '6214bcc27dfe49aa54f2bfe9'
+            break
+        case 6:
+            var id = '6214bcc27dfe49aa54f2bfea'
             break
     }
     socket.emit('updateTable', data)
@@ -160,10 +166,10 @@ function updateScore(calledFrom) {
     }
     switch (scoreNumber) {
         case 1:
-            var id = '5e50548f13f5a033bc41080c'
+            var id = '6214b2d57dfe49aa54f2bfd3'
             break
         case 2:
-            var id = '5e50549413f5a033bc41080d'
+            var id = '6214b2d57dfe49aa54f2bfd4'
             break
     }
     socket.emit('updateScore', data)
@@ -188,10 +194,10 @@ function updateMatch(calledFrom) {
     }
     switch (number) {
         case 1:
-            var id = '5e50548f13f5a033bc41080c'
+            var id = '6214b2d57dfe49aa54f2bfd3'
             break
         case 2:
-            var id = '5e50549413f5a033bc41080d'
+            var id = '6214b2d57dfe49aa54f2bfd4'
             break
     }
     socket.emit('updateMatch', data)

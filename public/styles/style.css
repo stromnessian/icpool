@@ -90,12 +90,12 @@ body {
     height: 50px
 }
 
-#mainShetlandFlag1, #mainShetlandFlag2  {
+#mainOrkneyFlag1, #mainOrkneyFlag2 {
     top: 20px;
     left: 320px;
 }
 
-#mainOrkneyFlag1, #mainOrkneyFlag2 {
+#mainShetlandFlag1, #mainShetlandFlag2  {
     top: 20px;
     left: 870px;
 }
@@ -152,7 +152,7 @@ body {
 
 .tableLabel {
     position: absolute;
-    font-size: 24px;
+    font-size: 20px;
     text-transform: uppercase;
     font-weight: bold;
     border-radius: 10px;
@@ -187,36 +187,53 @@ body {
 }
 
 #table1Label {
-    top: 200px;
+    top: 190px;
 }
 
 #table1Scoreboard {
-    top: 200px;
+    top: 190px;
 }
 
 #table2Label {
-    top: 280px;
+    top: 250px;
 }
 
 #table2Scoreboard {
-    top: 280px;
+    top: 250px;
 }
 
 #table3Label {
-    top: 360px;
+    top: 310px;
 }
 
 #table3Scoreboard {
-    top: 360px;
+    top: 310px;
 }
 
 #table4Label {
-    top: 440px;
+    top: 370px;
 }
 
 #table4Scoreboard {
-    top: 440px;
+    top: 370px;
 }
+
+#table5Label {
+    top: 430px;
+}
+
+#table5Scoreboard {
+    top: 430px;
+}
+
+#table6Label {
+    top: 490px;
+}
+
+#table6Scoreboard {
+    top: 490px;
+}
+
 /* ^^^ FOR UPDATE PAGE ^^^ */
 
 #srTrioBg {
@@ -230,7 +247,7 @@ body {
 .tableScoreboard, .indexTableScoreboard, .updateTableScoreboard {
     position: absolute;
     background-color: wheat;
-    width: 630px;
+    width: 640px;
     height: 40px;
     border-radius: 10px;
 }
@@ -255,7 +272,7 @@ body {
 .playerName {
     position: absolute;
     top: 0px;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: bold;
 }
 
@@ -263,14 +280,14 @@ body {
     position: absolute;
     margin-left: 0px;
     top: 4px;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: bold;
 }
 
 .playerScore {
     position: absolute;
     top: 1px;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: bold;
     background-color: gold;
     border-radius: 5px;
@@ -314,7 +331,7 @@ body {
 
 /* --- SIDE TABLES --- */
 
-/* --- TOP SIDE TABLE --- */
+/* --- TOP SIDE TABLE --- 
 #topSideTableLabel {
     top: 5px;
     left: 1285px;
@@ -326,7 +343,7 @@ body {
 /* ^^^ TOP SIDE TABLE ^^^ */
 
 
-/* --- MIDDLE SIDE TABLE --- */
+/* --- MIDDLE SIDE TABLE --- 
 #middleSideTableLabel {
     top: 370px;
     left: 1290px;
@@ -339,7 +356,7 @@ body {
 /* ^^^ MIDDLE SIDE TABLE ^^^ */
 
 
-/* --- BOTTOM SIDE TABLE --- */
+/* --- BOTTOM SIDE TABLE --- 
 #bottomSideTableLabel {
     top: 730px;
     left: 1290px;
@@ -371,7 +388,7 @@ body {
 
 #sponsorImage {
     position: absolute;
-    width: 1280px;
+    height: 240px;
     bottom: 0px;
 }
 

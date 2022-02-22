@@ -10,6 +10,10 @@ const playerSchema = new mongoose.Schema({
         enum: ['Orkney', 'Shetland'],
         required: true
     },
+    index: {
+        type: Number,
+        required: true
+    }
 })
 
 module.exports = mongoose.model('Player', playerSchema)

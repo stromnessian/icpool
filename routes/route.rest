@@ -1,18 +1,23 @@
 GET http://localhost:3000/players
 
 ###
+GET http://localhost:3000/tables
 
-
-GET http://localhost:3000/scores/
 ###
+GET http://localhost:3000/scores/
+
+###
+GET http://localhost:3000/matches/
+
 
 DELETE http://localhost:3000/tables/5e4eea51ce133b0e043776ab
 
 ###
 
-PATCH http://localhost:3000/scores/5e50549413f5a033bc41080d
+PATCH http://localhost:3000/tables/6214bcc27dfe49aa54f2bfe5
 Content-Type: application/json
 
 {
-    "number": 2
+    "player1Name": "John Stun",
+    "player2Name": "Ally Pally"
 }
