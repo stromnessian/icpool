@@ -119,6 +119,30 @@ body {
     top: 20px;
     left: 990px;
 }
+
+#streamMainOrkneyFlag1 {
+    top: 7px;
+    left: 260px;
+    height: 36px;
+}
+
+#streamMainShetlandFlag1 {
+    top: 7px;
+    left: 990px;
+    height: 36px;
+}
+
+#streamMainOrkneyFlag2 {
+    top: 7px;
+    left: 260px;
+    height: 36px;
+}
+
+#streamMainShetlandFlag2 {
+    top: 7px;
+    left: 990px;
+    height: 36px;
+}
 /* ^^^ MATCH FLAGS ^^^ */
 
 
@@ -165,6 +189,34 @@ body {
     position: absolute;
     top: 20px;
     left: 930px;
+}
+
+#streamMatch1Score1Label {
+    position: absolute;
+    top: -5px;
+    left: 360px;
+    font-size: 36px;
+}
+
+#streamMatch1Score2Label {
+    position: absolute;
+    top: -5px;
+    left: 930px;
+    font-size: 36px;
+}
+
+#streamMatch2Score1Label {
+    position: absolute;
+    top: -5px;
+    left: 360px;
+    font-size: 36px;
+}
+
+#streamMatch2Score2Label {
+    position: absolute;
+    top: -5px;
+    left: 930px;
+    font-size: 36px;
 }
 
 /* ^^^ MATCH SCORES ^^^ */
@@ -276,7 +328,7 @@ body {
 
 #mainTableLabel {
     top: 140px;
-    left: 20px;
+    left: 200px;
 }
 
 #mainTableScoreboard {
