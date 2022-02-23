@@ -151,16 +151,16 @@
             var mainTable = table.tableNumber
             switch (mainTable) {
                 case 1:
-                    div = "mainTable";
+                    div = "stream2MainTable";
                     break;
                 case 2:
-                    div = "topSideTable";
+                    div = "stream2TopSideTable";
                     break;
                 case 3:
-                    div = "middleSideTable";
+                    div = "stream2MiddleSideTable";
                     break;
                 case 4:
-                    div = "bottomSideTable";
+                    div = "stream2BottomSideTable";
                     break;
             }
             
@@ -191,12 +191,12 @@
             console.log('Score changed...')
             var scoreNumber = score.number
             if (score.score1) {
-                var elementId = "streamMatch" + scoreNumber + "Score1Label"
+                var elementId = "stream2Match" + scoreNumber + "Score1Label"
                 var element = document.getElementById(elementId)
                 element.innerHTML = score.score1
             }
             if (score.score2) {
-                var elementId = "streamMatch" + scoreNumber + "Score2Label"
+                var elementId = "stream2Match" + scoreNumber + "Score2Label"
                 var element = document.getElementById(elementId)
                 element.innerHTML = score.score2
             }
@@ -204,7 +204,7 @@
 
         socket.on('matchChange', match => {
             var matchNumber = match.number
-            var elementId = "streamMatch" + matchNumber + "Label"
+            var elementId = "stream2Match" + matchNumber + "Label"
             var element = document.getElementById(elementId)
             element.innerHTML = match.name
         })
