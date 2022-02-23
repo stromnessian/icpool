@@ -16,6 +16,13 @@ body {
     background-color: wheat;
 }
 
+.competition {
+    position: absolute;
+    width: 1280px;
+    height: 70px;
+    background-color: wheat;
+}
+
 .competitionLabel {
     position: absolute;
     top: 5px;
@@ -326,12 +333,12 @@ body {
 }
 /* --- MAIN TABLE LABEL --- */
 
-#mainTableLabel {
+#streamMainTableLabel {
     top: 140px;
     left: 200px;
 }
 
-#mainTableScoreboard {
+#streamMainTableScoreboard {
     top: 540px;
     left: 320px;
 }
@@ -494,3 +501,129 @@ body {
 }
 
 /* --- SPONSOR DIV --- */
+
+/* --- STREAM 2 TESTING NEW STREAM PAGE --- */
+.stream2Background {
+    position: absolute;
+    width: 1280px;
+    opacity: 0.3;
+    z-index: 0;
+}
+
+#stream2CompetitionLabel {
+    font-size: 32px;
+    top: -8px;
+    opacity: 1;
+    z-index: 100;
+}
+
+#stream2Score1 {
+    top: 40px;
+    height: 40px;
+}
+
+#stream2Match1Label {
+    top: -5px;
+    font-size: 32px;
+}
+
+#stream2MainShetlandFlag1 {
+    top: 4px;
+    left: 990px;
+    height: 32px;
+}
+
+#stream2Match1Score1Label {
+    position: absolute;
+    top: -5px;
+    left: 360px;
+    font-size: 32px;
+}
+
+#stream2MainOrkneyFlag1 {
+    top: 4px;
+    left: 260px;
+    height: 32px;
+}
+
+#stream2Match1Score2Label {
+    position: absolute;
+    top: -5px;
+    left: 930px;
+    font-size: 32px;
+}
+
+#stream2MainTableLabel {
+    top: 120px;
+    left: 160px;
+    font-size: 20px;
+}
+
+#stream2MainTableScoreboard {
+    top: 560px;
+    left: 320px;
+    font-size: 24px;
+}
+
+#stream2MainTablePlayer1, #stream2MainTablePlayer2  {
+    top: 3px;
+    padding-left: 10px;
+    font-size: 22px;
+}
+
+#stream2Score2 {
+    top: 630px;
+    height: 40px;
+}
+
+#stream2Match2Label {
+    top: -5px;
+    font-size: 32px;
+}
+
+#stream2MainShetlandFlag2 {
+    top: 4px;
+    left: 990px;
+    height: 32px;
+}
+
+#stream2Match2Score1Label {
+    position: absolute;
+    top: -5px;
+    left: 360px;
+    font-size: 32px;
+}
+
+#stream2MainOrkneyFlag2 {
+    top: 4px;
+    left: 260px;
+    height: 32px;
+}
+
+#stream2Match2Score2Label {
+    position: absolute;
+    top: -5px;
+    left: 930px;
+    font-size: 32px;
+}
+
+.stream2SponsorLower {
+    position: absolute;
+    top: 670px;
+    width: 1280px;
+    height: 50px;
+}
+
+#stream2SponsorStrapLower {
+    position: absolute;
+    height: 60px;
+    bottom: 5px;
+    left: 5px;
+}
+
+#stream2SponsorImageRight {
+    position: absolute;
+    bottom: 5px;
+    right: -5px;
+    height: 150px;
+}

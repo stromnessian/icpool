@@ -13,86 +13,86 @@
 </head>
 <body>
     <!-- COMPETITION TITLE -->
-    <div class="competition">
+    <div class="streamCompetition">
         <div>
-            <label class="competitionLabel" id="streamCompetitionLabel" type="text">2022 INTER COUNTY POOL ORKNEY v SHETLAND</label>
+            <label class="competitionLabel" id="stream2CompetitionLabel" type="text">2022 INTER COUNTY POOL ORKNEY v SHETLAND</label>
         </div>
     </div>
 
-    <img class="background" src="../public/images/hp-dragon-legend-bg-stream.jpg">
+    <img class="stream2Background" src="../public/images/hp-dragon-legend-bg-stream2.jpg">
 
     <!-- MATCH 1 SCOREBOARD -->
-    <div class="score" id="streamScore1">
+    <div class="score" id="stream2Score1">
         <div>
-            <label class="matchLabel" id="streamMatch1Label"></label>
+            <label class="matchLabel" id="stream2Match1Label"></label>
         </div>
         <div>
-            <img src="images/shetland_flag.png" class="mainFlag" id="streamMainShetlandFlag1">
+            <img src="images/shetland_flag.png" class="mainFlag" id="stream2MainShetlandFlag1">
         </div>
         <div>
-            <label class="matchScoreLabel" id="streamMatch1Score1Label" type="number"></label>
+            <label class="matchScoreLabel" id="stream2Match1Score1Label" type="number"></label>
         </div>
         <div>
-            <img src="images/orkney_flag.png" class="mainFlag" id="streamMainOrkneyFlag1">
+            <img src="images/orkney_flag.png" class="mainFlag" id="stream2MainOrkneyFlag1">
         </div>
         <div>    
-            <label class="matchScoreLabel" id="streamMatch1Score2Label" type="number"></label>
+            <label class="matchScoreLabel" id="stream2Match1Score2Label" type="number"></label>
         </div>
     </div>
 
     
     <!-- MATCH 2 SCOREBOARD -->
-    <div class="score" id="streamScore2">
+    <div class="score" id="stream2Score2">
         <div>
-            <label class="matchLabel" id="streamMatch2Label"></label>
+            <label class="matchLabel" id="stream2Match2Label"></label>
         </div>
         <div>
-            <img src="images/shetland_flag.png" class="mainFlag" id="streamMainShetlandFlag2">
+            <img src="images/shetland_flag.png" class="mainFlag" id="stream2MainShetlandFlag2">
         </div>
         <div>
-            <label class="matchScoreLabel" id="streamMatch2Score1Label" type="number"></label>
+            <label class="matchScoreLabel" id="stream2Match2Score1Label" type="number"></label>
         </div>
         <div>
-            <img src="images/orkney_flag.png" class="mainFlag" id="streamMainOrkneyFlag2">
+            <img src="images/orkney_flag.png" class="mainFlag" id="stream2MainOrkneyFlag2">
         </div>
         <div>    
-            <label class="matchScoreLabel" id="streamMatch2Score2Label" type="number"></label>
+            <label class="matchScoreLabel" id="stream2Match2Score2Label" type="number"></label>
         </div>
     </div>
 
     <!-- MAIN  TABLE LABEL-->
     <div>
-        <label class="tableLabel" id="streamMainTableLabel">Table 1</label>
+        <label class="tableLabel" id="stream2MainTableLabel">Table 1</label>
     </div>
     <!-- MAIN  TABLE SCOREBOARD-->
-    <div class="tableScoreboard" id="streamMainTableScoreboard">
+    <div class="tableScoreboard" id="stream2MainTableScoreboard">
         <div>
             <img src="images/orkney_flag.png" class="playerFlag player1Flag" id="mainTablePlayer1Flag">
         </div>
         <div>
-            <label class="playerName player1Name" id="mainTablePlayer1"></label>
+            <label class="playerName player1Name" id="stream2MainTablePlayer1"></label>
         </div>
         <div>
-            <label class="playerScore player1Score" id="mainTableScore1"></label>
+            <label class="playerScore player1Score" id="stream2MainTableScore1"></label>
         </div>
         <div>
             <img src="images/shetland_flag.png" class="playerFlag player2Flag" id="mainTablePlayer2Flag">
         </div>
         <div>
-            <label class="playerName player2Name" id="mainTablePlayer2"></label>
+            <label class="playerName player2Name" id="stream2MainTablePlayer2"></label>
         </div>
         <div>
-            <label class="playerScore player2Score" id="mainTableScore2"></label>
+            <label class="playerScore player2Score" id="stream2MainTableScore2"></label>
         </div>
     </div>
 
     <!-- SPONSORS SECTION -->
-    <div class="streamSponsorLower">
+    <div class="stream2SponsorLower">
         <div>
-            <img src="../public/images/hpStrap.png" id="streamSponsorStrapLower">
+            <img src="../public/images/hpStrap.png" id="stream2SponsorStrapLower">
         </div>
         <div>
-            <img src="../public/images/Highland-Park-Dragon-Legend-1.png" id="streamSponsorImageRight">
+            <img src="../public/images/Highland-Park-Dragon-Legend-1.png" id="stream2SponsorImageRight">
         </div>
     </div>
     <!-- END OF SPONSORS SECTION -->
@@ -111,18 +111,18 @@
             score1 = scores[0]
             score2 = scores[1]
 
-            var match1Label = document.getElementById('streamMatch1Label')
+            var match1Label = document.getElementById('stream2Match1Label')
             match1Label.innerHTML = score1.name
-            var match1Score1Label = document.getElementById('streamMatch1Score1Label')
+            var match1Score1Label = document.getElementById('stream2Match1Score1Label')
             match1Score1Label.innerHTML = score1.score1
-            var match1Score2Label = document.getElementById('streamMatch1Score2Label')
+            var match1Score2Label = document.getElementById('stream2Match1Score2Label')
             match1Score2Label.innerHTML = score1.score2
 
-            var match2Label = document.getElementById('streamMatch2Label')
+            var match2Label = document.getElementById('stream2Match2Label')
             match2Label.innerHTML = score2.name
-            var match2Score1Label = document.getElementById('streamMatch2Score1Label')
+            var match2Score1Label = document.getElementById('stream2Match2Score1Label')
             match2Score1Label.innerHTML = score2.score1
-            var match2Score2Label = document.getElementById('streamMatch2Score2Label')
+            var match2Score2Label = document.getElementById('stream2Match2Score2Label')
             match2Score2Label.innerHTML = score2.score2
         })
 
@@ -134,13 +134,13 @@
         table3 = tables[2]
         table4 = tables[3]
 
-        var mainTablePlayer1 = document.getElementById('mainTablePlayer1')
+        var mainTablePlayer1 = document.getElementById('stream2MainTablePlayer1')
         mainTablePlayer1.innerHTML = table1.player1Name
-        var mainTableScore1 = document.getElementById('mainTableScore1')
+        var mainTableScore1 = document.getElementById('stream2MainTableScore1')
         mainTableScore1.innerHTML = table1.player1Score
-        var mainTablePlayer2 = document.getElementById('mainTablePlayer2')
+        var mainTablePlayer2 = document.getElementById('stream2MainTablePlayer2')
         mainTablePlayer2.innerHTML = table1.player2Name
-        var mainTableScore1 = document.getElementById('mainTableScore2')
+        var mainTableScore1 = document.getElementById('stream2MainTableScore2')
         mainTableScore1.innerHTML = table1.player2Score
 
         })
