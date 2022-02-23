@@ -16,13 +16,6 @@ body {
     background-color: wheat;
 }
 
-.competition {
-    position: absolute;
-    width: 1280px;
-    height: 70px;
-    background-color: wheat;
-}
-
 .competitionLabel {
     position: absolute;
     top: 5px;
@@ -507,13 +500,28 @@ body {
     position: absolute;
     width: 1280px;
     opacity: 0.3;
-    z-index: 0;
+}
+
+.stream2Competition {
+    position: absolute;
+    width: 1280px;
+    height: 40px;
+    background-color: wheat;
+    z-index: 90;
+}
+
+.stream2CompetitionLabel {
+    position: absolute;
+    top: 5px;
+    width: 1280px;
+    font-size: 32px;
+    text-align: center;
+    color: black;
+    font-weight: bolder;
 }
 
 #stream2CompetitionLabel {
-    font-size: 32px;
     top: -8px;
-    opacity: 1;
     z-index: 100;
 }
 
@@ -554,8 +562,8 @@ body {
 }
 
 #stream2MainTableLabel {
-    top: 120px;
-    left: 160px;
+    top: 110px;
+    left: 180px;
     font-size: 20px;
 }
 
@@ -611,12 +619,13 @@ body {
     position: absolute;
     top: 670px;
     width: 1280px;
+    background-color: wheat;
     height: 50px;
 }
 
 #stream2SponsorStrapLower {
     position: absolute;
-    height: 60px;
+    height: 64px;
     bottom: 5px;
     left: 5px;
 }
