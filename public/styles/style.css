@@ -510,21 +510,6 @@ body {
     z-index: 90;
 }
 
-.stream2CompetitionLabel {
-    position: absolute;
-    top: 5px;
-    width: 1280px;
-    font-size: 32px;
-    text-align: center;
-    color: black;
-    font-weight: bolder;
-}
-
-#stream2CompetitionLabel {
-    top: -8px;
-    z-index: 100;
-}
-
 #stream2Score1 {
     top: 40px;
     height: 40px;

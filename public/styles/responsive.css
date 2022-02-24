@@ -1,0 +1,86 @@
+body {
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1em;
+  background-color: wheat;
+}
+
+h1 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  padding: 0.125em;
+}
+
+p {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: wheat;
+}
+
+#headerContainer {
+  justify-content: center;
+}
+
+#signOutContainer {
+  justify-content: right;
+  padding-top: 0.25em;
+}
+
+#signOutButton {
+  font-size: 0.75rem;
+  background-color: cadetblue;
+  color: black;
+}
+
+.matchScoreboardContainer {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  background-color: gold;
+}
+
+.tableContainer {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+
+.tableLabel {
+  font-weight: bold;
+}
+
+.tableScoreboard {
+
+}
+
+#table1Container,
+#table3Container,
+#table5Container {
+  background-color: lightskyblue;
+}
+
+#table2Container,
+#table4Container,
+#table6Container {
+  background-color: slategray;
+}
+
+.tableNameInput {
+  width: 12em;
+}
+
+.flag {
+  width: 2em;
+}
+
+.matchSelect {
+  width: 8em;
+}
+
+.matchScoreInput {
+  width: 3em;
+}

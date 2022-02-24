@@ -29,8 +29,8 @@ app.get('/', function (req, res) {
     res.sendFile(path.join(__dirname + '/index.html'))
 })
 
-app.get('/mobile', function (req, res) {
-    res.sendFile(path.join(__dirname + '/mobile.html'))
+app.get('/responsive', function (req, res) {
+    res.sendFile(path.join(__dirname + '/responsive.html'))
 })
 
 
