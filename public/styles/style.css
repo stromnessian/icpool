@@ -224,12 +224,12 @@ body {
 
 .tableLabel {
     position: absolute;
-    font-size: 20px;
+    font-size: 16px;
     text-transform: uppercase;
     font-weight: bold;
     border-radius: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 16px;
+    padding-right: 16px;
     background-color: wheat;
 }
 
@@ -320,8 +320,8 @@ body {
 .tableScoreboard, .indexTableScoreboard, .updateTableScoreboard {
     position: absolute;
     background-color: wheat;
-    width: 640px;
-    height: 40px;
+    width: 440px;
+    height: 30px;
     border-radius: 10px;
 }
 /* --- MAIN TABLE LABEL --- */
@@ -339,7 +339,7 @@ body {
 .playerFlag {
     position: absolute;
     bottom: 5px;
-    height: 30px;
+    height: 24px;
 }
 
 .playerName {
@@ -360,7 +360,7 @@ body {
 .playerScore {
     position: absolute;
     top: 1px;
-    font-size: 24px;
+    font-size: 18px;
     font-weight: bold;
     background-color: gold;
     border-radius: 5px;
@@ -379,27 +379,27 @@ body {
 }
 
 .player1Flag {
-    left: 5px;
+    left: 10px;
 }
 
 .player1Name {
-    left: 50px;
+    left: 40px;
 }
 
 .player1Score {
-    left: 290px;
+    left: 200px;
 }
 
 .player2Flag {
-    left: 320px;
+    left: 225px;
 }
 
 .player2Name {
-    left: 365px;
+    left: 255px;
 }
 
 .player2Score {
-    left: 605px;
+    left: 415px;
 }
 
 /* --- SIDE TABLES --- */
@@ -549,19 +549,19 @@ body {
 #stream2MainTableLabel {
     top: 110px;
     left: 180px;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 #stream2MainTableScoreboard {
     top: 560px;
-    left: 320px;
-    font-size: 24px;
+    left: 420px;
+    font-size: 18px;
 }
 
 #stream2MainTablePlayer1, #stream2MainTablePlayer2  {
-    top: 3px;
+    top: 0px;
     padding-left: 10px;
-    font-size: 22px;
+    font-size: 18px;
 }
 
 #stream2Score2 {
