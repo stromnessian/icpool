@@ -57,7 +57,8 @@ p {
 
 .tableScoreboard {
   width: 80%;
-  justify-content: center;
+  justify-content: space-evenly;
+  background-color: azure;
 }
 
 #table1Container,
@@ -74,6 +75,10 @@ p {
 
 .tableName {
   width: 12em;
+}
+
+.tableScore {
+
 }
 
 .flag {
