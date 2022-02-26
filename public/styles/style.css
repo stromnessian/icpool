@@ -320,8 +320,8 @@ body {
 .tableScoreboard, .indexTableScoreboard, .updateTableScoreboard {
     position: absolute;
     background-color: wheat;
-    width: 440px;
-    height: 30px;
+    width: 500px;
+    height: 32px;
     border-radius: 10px;
 }
 /* --- MAIN TABLE LABEL --- */
@@ -338,7 +338,7 @@ body {
 
 .playerFlag {
     position: absolute;
-    bottom: 5px;
+    bottom: 4px;
     height: 24px;
 }
 
@@ -387,19 +387,19 @@ body {
 }
 
 .player1Score {
-    left: 200px;
+    left: 230px;
 }
 
 .player2Flag {
-    left: 225px;
-}
-
-.player2Name {
     left: 255px;
 }
 
+.player2Name {
+    left: 285px;
+}
+
 .player2Score {
-    left: 415px;
+    left: 475px;
 }
 
 /* --- SIDE TABLES --- */
@@ -542,7 +542,7 @@ body {
 #stream2Match1Score2Label {
     position: absolute;
     top: -5px;
-    left: 930px;
+    left: 920px;
     font-size: 32px;
 }
 
@@ -553,13 +553,13 @@ body {
 }
 
 #stream2MainTableScoreboard {
-    top: 560px;
-    left: 420px;
+    top: 580px;
+    left: 390px;
     font-size: 18px;
 }
 
 #stream2MainTablePlayer1, #stream2MainTablePlayer2  {
-    top: 0px;
+    padding-top: 1px;
     padding-left: 10px;
     font-size: 18px;
 }
@@ -596,7 +596,7 @@ body {
 #stream2Match2Score2Label {
     position: absolute;
     top: -5px;
-    left: 930px;
+    left: 920px;
     font-size: 32px;
 }
 
