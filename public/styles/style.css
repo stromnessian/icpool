@@ -516,33 +516,33 @@ body {
 
 #stream2Match1Label {
     top: -5px;
-    font-size: 32px;
+    font-size: 28px;
 }
 
 #stream2MainShetlandFlag1 {
-    top: 4px;
+    top: 6px;
     left: 990px;
-    height: 32px;
+    height: 28px;
 }
 
 #stream2Match1Score1Label {
     position: absolute;
     top: -5px;
     left: 360px;
-    font-size: 32px;
+    font-size: 28px;
 }
 
 #stream2MainOrkneyFlag1 {
-    top: 4px;
+    top: 6px;
     left: 260px;
-    height: 32px;
+    height: 28px;
 }
 
 #stream2Match1Score2Label {
     position: absolute;
     top: -5px;
     left: 920px;
-    font-size: 32px;
+    font-size: 28px;
 }
 
 #stream2MainTableLabel {
@@ -570,33 +570,33 @@ body {
 
 #stream2Match2Label {
     top: -5px;
-    font-size: 32px;
+    font-size: 28px;
 }
 
 #stream2MainShetlandFlag2 {
-    top: 4px;
+    top: 6px;
     left: 990px;
-    height: 32px;
+    height: 28px;
 }
 
 #stream2Match2Score1Label {
     position: absolute;
     top: -5px;
     left: 360px;
-    font-size: 32px;
+    font-size: 28px;
 }
 
 #stream2MainOrkneyFlag2 {
-    top: 4px;
+    top: 6px;
     left: 260px;
-    height: 32px;
+    height: 28px;
 }
 
 #stream2Match2Score2Label {
     position: absolute;
     top: -5px;
     left: 920px;
-    font-size: 32px;
+    font-size: 28px;
 }
 
 .stream2SponsorLower {
