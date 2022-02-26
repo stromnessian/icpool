@@ -498,7 +498,6 @@ body {
 /* --- STREAM 2 TESTING NEW STREAM PAGE --- */
 .stream2Background {
     position: absolute;
-    width: 1280px;
     opacity: 0.3;
 }
 
@@ -511,8 +510,8 @@ body {
 }
 
 #stream2Score1 {
-    top: 40px;
-    height: 40px;
+    top: 0px;
+    height: 43px;
 }
 
 #stream2Match1Label {
@@ -547,8 +546,8 @@ body {
 }
 
 #stream2MainTableLabel {
-    top: 110px;
-    left: 180px;
+    top: 70px;
+    left: 150px;
     font-size: 18px;
 }
 
@@ -565,8 +564,8 @@ body {
 }
 
 #stream2Score2 {
-    top: 630px;
-    height: 40px;
+    top: 628px;
+    height: 42px;
 }
 
 #stream2Match2Label {
@@ -604,20 +603,27 @@ body {
     position: absolute;
     top: 670px;
     width: 1280px;
-    background-color: wheat;
-    height: 50px;
+    background-color: rgb(162, 219, 255);
+    height: 55px;
 }
 
 #stream2SponsorStrapLower {
     position: absolute;
-    height: 64px;
+    height: 62px;
     bottom: 5px;
     left: 5px;
+}
+
+#stream2CompetitionLabel {
+    padding-left: 330px;
+    padding-top: 14px;
+    width: 960px;
+    opacity: 80%;
 }
 
 #stream2SponsorImageRight {
     position: absolute;
     bottom: 5px;
     right: -5px;
-    height: 150px;
+    height: 140px;
 }
